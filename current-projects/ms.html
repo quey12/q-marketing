@@ -14,36 +14,34 @@
   <body class="bg-gray-900 text-white">
     <!-- Header -->
     <header
-      class="relative container mx-auto px-6 py-4 flex items-center"
+      class="relative container mx-auto px-6 py-4 flex flex-col md:flex-row items-center"
       data-aos="fade"
     >
       <div class="logo">
         <img
-          src="../../assets/images/logo.png"
+          src="assets/images/Untitled design (16).png"
           alt="Q Marketing Logo"
-          class="h-16"
+          class="h-20"
         />
       </div>
-      <nav class="absolute inset-x-0 flex justify-center">
-        <ul class="flex space-x-6">
+      <nav
+        class="w-full md:w-auto md:absolute md:inset-x-0 flex justify-center mt-4 md:mt-0"
+      >
+        <ul
+          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-center"
+        >
+          <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+          <li><a href="about.html" class="hover:text-blue-400">About</a></li>
           <li>
-            <a href="../../index.html" class="hover:text-blue-400">Home</a>
+            <a href="services.html" class="hover:text-blue-400">Services</a>
           </li>
           <li>
-            <a href="../../about.html" class="hover:text-blue-400">About</a>
-          </li>
-          <li>
-            <a href="../../services.html" class="hover:text-blue-400"
-              >Services</a
+            <a href="case-studies.html" class="hover:text-blue-400"
+              >Case Studies</a
             >
           </li>
           <li>
-            <a href="../../portfolio.html" class="hover:text-blue-400"
-              >Portfolio</a
-            >
-          </li>
-          <li>
-            <a href="../../contact.html" class="hover:text-blue-400">Contact</a>
+            <a href="contact.html" class="hover:text-blue-400">Contact</a>
           </li>
         </ul>
       </nav>
