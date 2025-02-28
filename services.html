@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Q Marketing Agency</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- Typed.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Optionally include your custom CSS -->
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header
+      class="relative container mx-auto px-6 py-4 flex items-center"
+      data-aos="fade"
+    >
+      <!-- Logo -->
+      <div class="logo">
+        <img
+          src="assets/images/Untitled design (16).png"
+          alt="Q Marketing Logo"
+          class="h-16"
+        />
+      </div>
+      <!-- Centered Navigation -->
+      <nav class="absolute inset-x-0 flex justify-center">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+          <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+          <li>
+            <a href="services.html" class="hover:text-blue-400">Services</a>
+          </li>
+          <li>
+            <a href="case-studies.html" class="hover:text-blue-400"
+              >Case Studies</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-blue-400">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section with Background Video and Overlay Text -->
+    <section
+      class="hero relative h-screen flex items-center overflow-hidden"
+      data-aos="fade"
+    >
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="assets/videos/videoplayback.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <!-- Overlay Text -->
+      <div
+        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      >
+        <h1
+          id="typewriter"
+          class="text-4xl md:text-6xl font-bold text-center"
+        ></h1>
+      </div>
+    </section>
+
+    <!-- Detailed Services Section -->
+    <section class="detailed-services py-16 bg-gray-900" data-aos="fade-up">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">What We Offer</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Seed Sprint Card -->
+          <div
+            class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
+          >
+            <h3 class="text-2xl font-bold mb-4">Seed Sprint</h3>
+            <p class="mb-4">
+              Our Seed Sprint is tailored for early-stage startups eager to
+              rapidly build their brand identity and digital presence.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>
+                One-month sprint to develop brand identity, pitch deck, and
+                landing website
+              </li>
+              <li>In-depth market research and competitor analysis</li>
+              <li>Custom logo and visual identity design</li>
+              <li>Creation of a compelling brand narrative</li>
+              <li>Rapid prototyping and iterative design process</li>
+            </ul>
+          </div>
+          <!-- Product Sprint Card -->
+          <div
+            class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
+          >
+            <h3 class="text-2xl font-bold mb-4">Product Sprint</h3>
+            <p class="mb-4">
+              Our Product Sprint is ideal for startups with an MVP that need to
+              refine their product design and user experience.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>Rapid user testing and feedback collection</li>
+              <li>UX/UI enhancements and high-fidelity mockups</li>
+              <li>Interactive prototypes for quick iteration</li>
+              <li>Integration of customer insights for product improvements</li>
+              <li>Development of a scalable design system</li>
+            </ul>
+          </div>
+          <!-- Brand Creation Card -->
+          <div
+            class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
+          >
+            <h3 class="text-2xl font-bold mb-4">Brand Creation</h3>
+            <p class="mb-4">
+              Our comprehensive Brand Creation package brings your vision to
+              life with a full suite of branding services.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>End-to-end brand identity development</li>
+              <li>Visual and verbal brand strategy formulation</li>
+              <li>Custom logo, color palette, and typography selection</li>
+              <li>Detailed brand guidelines and asset creation</li>
+              <li>Integrated website and digital experience design</li>
+            </ul>
+          </div>
+          <!-- Rebranding Services Card -->
+          <div
+            class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
+          >
+            <h3 class="text-2xl font-bold mb-4">Rebranding Services</h3>
+            <p class="mb-4">
+              We help businesses and influencers rebuild their reputation and
+              become relevant again after setbacks. Whether it’s a PR crisis or
+              an outdated image, we craft a new, compelling narrative that
+              restores trust and engagement.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>Brand identity overhaul</li>
+              <li>Public perception analysis and repositioning</li>
+              <li>Social media and digital strategy realignment</li>
+              <li>New logo, visuals, and messaging development</li>
+              <li>Full-scale media and PR campaign execution</li>
+            </ul>
+          </div>
+          <!-- Subscription Service Card -->
+          <div
+            class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
+          >
+            <h3 class="text-2xl font-bold mb-4">Subscription Service</h3>
+            <p class="mb-4">
+              Our Subscription Service offers ongoing support and tailored
+              marketing solutions to keep your brand ahead.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>Monthly strategy sessions</li>
+              <li>Continuous performance monitoring</li>
+              <li>Regular content updates</li>
+              <li>Dedicated account manager</li>
+              <li>Priority support and consultation</li>
+            </ul>
+          </div>
+          <!-- One Day Service Card -->
+          <div
+            class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
+          >
+            <h3 class="text-2xl font-bold mb-4">One Day Service</h3>
+            <p class="mb-4">
+              Our One Day Service is designed for businesses needing immediate,
+              short-term solutions to jumpstart their marketing efforts.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>Quick brand audit</li>
+              <li>Rapid strategy consultation</li>
+              <li>Immediate actionable insights</li>
+              <li>Fast implementation advice</li>
+              <li>On-demand support session</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6" data-aos="fade">
+      <div class="w-full px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <img
+            src="assets/images/Untitled design (16).png"
+            alt="Q Marketing Logo"
+            class="h-16"
+          />
+          <p class="text-sm">We humbly create for you.</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2">Newsletter</h3>
+          <p class="text-sm mb-2">Subscribe for updates and insights.</p>
+          <form
+            action="https://formspree.io/f/mkgodgjg"
+            method="POST"
+            class="space-y-2"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              class="w-full p-2 rounded mb-2 text-gray-900"
+              required
+            />
+            <button
+              type="submit"
+              class="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded text-white font-semibold"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="text-center mt-4 pb-4 text-[10px]">
+        <p>© 2025 Q Marketing. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: true,
+      });
+
+      // Initialize Typed.js for the overlay text on the hero video
+      var typed = new Typed("#typewriter", {
+        strings: [
+          "Innovative Services for the Digital Age.",
+          "Accelerate Your Growth Today.",
+        ],
+        typeSpeed: 50,
+        backSpeed: 25,
+        loop: true,
+        backDelay: 2000,
+      });
+    </script>
+    <!-- Optional JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

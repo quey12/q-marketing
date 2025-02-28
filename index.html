@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q Marketing | Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+      .space-bg {
+        background: #0a0a23;
+        position: relative;
+        overflow: hidden;
+      }
+      .stars {
+        position: absolute;
+        inset: 0;
+        background: transparent;
+      }
+      .stars::before,
+      .stars::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 50px 30px #fff, 100px 200px #fff, 200px 50px #fff,
+          300px 150px #fff, 400px 250px #fff, 500px 100px #fff, 600px 300px #fff,
+          700px 80px #fff, 800px 220px #fff, 900px 180px #fff, 150px 350px #fff,
+          250px 400px #fff, 350px 280px #fff;
+        animation: twinkle 5s infinite ease-in-out;
+      }
+      .stars::after {
+        box-shadow: 120px 70px #fff, 180px 240px #fff, 240px 90px #fff,
+          320px 180px #fff, 450px 300px #fff, 550px 130px #fff, 650px 270px #fff,
+          750px 60px #fff, 850px 200px #fff, 950px 150px #fff, 200px 380px #fff,
+          300px 420px #fff, 400px 320px #fff;
+        animation-delay: -2.5s;
+      }
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.8;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <header
+      class="relative container mx-auto px-6 py-4 flex items-center"
+      data-aos="fade"
+    >
+      <div class="logo">
+        <img
+          src="assets/images/Untitled design (16).png"
+          alt="Q Marketing Logo"
+          class="h-20"
+        />
+      </div>
+      <nav class="absolute inset-x-0 flex justify-center">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+          <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+          <li>
+            <a href="services.html" class="hover:text-blue-400">Services</a>
+          </li>
+          <li>
+            <a href="case-studies.html" class="hover:text-blue-400"
+              >Case Studies</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-blue-400">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section
+      class="hero relative h-screen flex items-center overflow-hidden"
+      data-aos="fade"
+    >
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="assets/videos/background.MP4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="relative container mx-auto text-center px-4">
+        <h1 id="typewriter" class="text-5xl font-bold mb-4"></h1>
+      </div>
+    </section>
+
+    <section class="services py-16 bg-gray-800" data-aos="fade">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          The Pioneers of Belief Driven Selling
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="service-card p-6 bg-gray-700 rounded-lg hover:shadow-xl transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4">Seed Sprint</h3>
+            <p>
+              AI-powered strategies designed to create a brand, deck, and
+              website quickly for early stage businesses.
+            </p>
+          </div>
+          <div
+            class="service-card p-6 bg-gray-700 rounded-lg hover:shadow-xl transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4">Product Sprint</h3>
+            <p>Perfect for businesses with an MVP looking to scale and grow.</p>
+          </div>
+          <div
+            class="service-card p-6 bg-gray-700 rounded-lg hover:shadow-xl transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4">Brand Creation</h3>
+            <p>
+              A full send brand package designed to build immersive digital
+              experiences that drive engagement and conversions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="automated-lead-gen py-16 bg-gray-900" data-aos="fade-up">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-12">Automated Lead Generation</h2>
+        <div class="max-w-2xl mx-auto">
+          <h3 class="text-2xl font-bold mb-4">
+            Grow Your Business Effortlessly
+          </h3>
+          <p class="mb-6 text-lg">
+            Our Automated Lead Generation service leverages cutting-edge tools
+            and strategies to attract, nurture, and convert leads without
+            constant manual effort. Perfect for businesses looking to scale
+            efficiently.
+          </p>
+          <ul class="list-disc list-inside text-lg space-y-2">
+            <li>Custom-built lead capture funnels</li>
+            <li>Automated email marketing campaigns</li>
+            <li>AI-driven lead scoring and segmentation</li>
+            <li>Integration with CRM platforms</li>
+            <li>Real-time analytics and performance tracking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-seo py-16 bg-gray-900" data-aos="fade-up">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-12">
+          Generative Engine Optimization (GEO)
+        </h2>
+        <div class="max-w-2xl mx-auto">
+          <h3 class="text-2xl font-bold mb-4">
+            Get Your Product Seen by AI Models
+          </h3>
+          <p class="mb-6 text-lg">
+            We optimize your product or service to appear in AI-generated
+            results, ensuring large language models (LLMs) like chatbots and
+            virtual assistants recommend you to users. Dominate the future of
+            search with us.
+          </p>
+          <ul class="list-disc list-inside text-lg space-y-2">
+            <li>Content structuring for LLM comprehension</li>
+            <li>Targeted keyword optimization for AI queries</li>
+            <li>Enhanced data markup for AI crawlers</li>
+            <li>Contextual authority building for model trust</li>
+            <li>Performance tracking in AI-driven outputs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="trusted-brands py-16 bg-gray-800" data-aos="fade">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Trusted by Leading Brands
+        </h2>
+        <div class="flex flex-nowrap justify-around gap-8 overflow-x-auto">
+          <div class="brand-wrapper">
+            <img
+              src="assets/images/Untitled design (1).png"
+              alt="Brand 1"
+              class="brand-logo"
+            />
+          </div>
+          <div class="brand-wrapper">
+            <img
+              src="assets/images/Untitled design (2).png"
+              alt="Brand 2"
+              class="brand-logo"
+            />
+          </div>
+          <div class="brand-wrapper">
+            <img
+              src="assets/images/Untitled design (3).png"
+              alt="Brand 3"
+              class="brand-logo"
+            />
+          </div>
+          <div class="brand-wrapper">
+            <img
+              src="assets/images/Untitled design (4).png"
+              alt="Brand 4"
+              class="brand-logo"
+            />
+          </div>
+          <div class="brand-wrapper">
+            <img
+              src="assets/images/Untitled design (5).png"
+              alt="Brand 5"
+              class="brand-logo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="typeform-section py-16 space-bg relative overflow-hidden"
+      data-aos="fade-up"
+    >
+      <div class="stars"></div>
+      <div class="relative container mx-auto px-6 text-center z-10">
+        <h2 class="text-4xl font-bold mb-6">Want to Work With Us?</h2>
+        <p class="text-lg mb-8 max-w-2xl mx-auto">
+          Let’s create something transformative together—out of this world. Fill
+          out the form below to launch your journey.
+        </p>
+        <div
+          data-tf-live="01JN4TVFGKJD1Z7EJ75AJ8KDSS"
+          style="width: 100%; height: 400px; max-width: 600px; margin: 0 auto"
+        ></div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 py-6" data-aos="fade">
+      <div class="w-full px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <img
+            src="assets/images/Untitled design (16).png"
+            alt="Q Marketing Logo"
+            class="h-16"
+          />
+          <p class="text-sm">We humbly create for you.</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2">Newsletter</h3>
+          <p class="text-sm mb-2">Subscribe for updates and insights.</p>
+          <form
+            action="https://formspree.io/f/mkgodgjg"
+            method="POST"
+            class="space-y-2"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              class="w-full p-2 rounded mb-2 text-gray-900"
+              required
+            />
+            <button
+              type="submit"
+              class="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded text-white font-semibold"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="text-center mt-4 pb-4 text-[10px]">
+        <p>© 2025 Q Marketing. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1200, once: true });
+      var typed = new Typed("#typewriter", {
+        strings: ["We create brands and products for the new internet."],
+        typeSpeed: 30,
+        backSpeed: 30,
+        showCursor: false,
+        loop: false,
+      });
+    </script>
+    <script src="//embed.typeform.com/next/embed.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

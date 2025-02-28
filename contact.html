@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Q Marketing Agency</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- Custom CSS (optional, kept from your original) -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Header (Aligned with index.html) -->
+    <header
+      class="relative container mx-auto px-6 py-4 flex items-center"
+      data-aos="fade-down"
+    >
+      <div class="logo">
+        <img
+          src="assets/images/Untitled design (16).png"
+          alt="Q Marketing Logo"
+          class="h-16"
+        />
+      </div>
+      <nav class="absolute inset-x-0 flex justify-center">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+          <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+          <li>
+            <a href="services.html" class="hover:text-blue-400">Services</a>
+          </li>
+          <li>
+            <a href="case-studies.html" class="hover:text-blue-400"
+              >Case Studies</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-blue-400">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Typeform Section with Boxed Container -->
+    <section
+      class="typeform-section py-16 bg-gray-900 overflow-hidden"
+      data-aos="fade-up"
+    >
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl font-bold mb-6">Get in Touch</h1>
+        <p class="text-lg mb-8 max-w-2xl mx-auto">
+          Ready to start a conversation? Fill out the form below to reach us.
+        </p>
+        <div
+          class="typeform-box bg-gray-800 p-6 rounded-lg shadow-lg max-w-2xl mx-auto"
+        >
+          <div
+            data-tf-live="01JN4TVFGKJD1Z7EJ75AJ8KDSS"
+            style="width: 100%; height: 500px"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info py-16 bg-gray-800" data-aos="fade-up">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6 text-center">Contact Information</h2>
+        <p class="text-lg mb-8 text-center max-w-2xl mx-auto">
+          Prefer a direct line? Here’s how to reach us anytime.
+        </p>
+        <div class="max-w-md mx-auto space-y-4">
+          <p>
+            <strong>Email:</strong>
+            <a
+              href="mailto:qmakescontent@gmail.com"
+              class="text-blue-400 hover:underline"
+              >qmakescontent@gmail.com</a
+            >
+          </p>
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+13122038106" class="text-blue-400 hover:underline"
+              >+1 (312) 203-8106</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6" data-aos="fade">
+      <div class="w-full px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <img
+            src="assets/images/Untitled design (16).png"
+            alt="Q Marketing Logo"
+            class="h-16"
+          />
+          <p class="text-sm">We humbly create for you.</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2">Newsletter</h3>
+          <p class="text-sm mb-2">Subscribe for updates and insights.</p>
+          <form
+            action="https://formspree.io/f/mkgodgjg"
+            method="POST"
+            class="space-y-2"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              class="w-full p-2 rounded mb-2 text-gray-900"
+              required
+            />
+            <button
+              type="submit"
+              class="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded text-white font-semibold"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="text-center mt-4 pb-4 text-[10px]">
+        <p>© 2025 Q Marketing. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: true,
+      });
+    </script>
+    <!-- Typeform Script -->
+    <script src="//embed.typeform.com/next/embed.js"></script>
+    <!-- Optional JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
