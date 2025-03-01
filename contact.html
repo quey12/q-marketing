@@ -3,42 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us | Q Marketing Agency</title>
+    <!-- SEO Optimized Meta Tags -->
+    <title>Contact Us | Q Marketing Agency - Get in Touch Today</title>
+    <meta
+      name="description"
+      content="Contact Q Marketing Agency for innovative digital marketing solutions. Reach us via email, phone, or our online form to start your project today."
+    />
+    <meta
+      name="keywords"
+      content="contact Q Marketing, digital marketing agency, get in touch, marketing consultation"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Q Marketing Agency" />
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Contact Us | Q Marketing Agency" />
+    <meta
+      property="og:description"
+      content="Get in touch with Q Marketing Agency for expert digital marketing services. Email, call, or use our form to connect today."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.qmarketing.com/contact.html" />
+    <meta
+      property="og:image"
+      content="https://www.qmarketing.com/assets/images/Untitled design (16).png"
+    />
     <link
       rel="icon"
       type="image/x-icon"
-      href="assets\images\Untitled design (16).png"
+      href="assets/images/Untitled design (16).png"
     />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS CSS for animations -->
+    <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <!-- Custom CSS (optional, kept from your original) -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- Structured Data (JSON-LD) for Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Q Marketing Agency",
+        "url": "https://www.qmarketing.com",
+        "logo": "https://www.qmarketing.com/assets/images/Untitled design (16).png",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+1-312-203-8106",
+            "contactType": "Customer Service",
+            "email": "qmakescontent@gmail.com",
+            "areaServed": "US",
+            "availableLanguage": "English"
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="bg-gray-900 text-white">
-    <!-- Header (Aligned with index.html) -->
+    <!-- Header -->
     <header
       class="relative container mx-auto px-6 py-4 flex flex-col md:flex-row items-center"
       data-aos="fade"
     >
       <div class="logo">
-        <img
-          src="assets/images/Untitled design (16).png"
-          alt="Q Marketing Logo"
-          class="h-20"
-        />
+        <a href="/" aria-label="Q Marketing Agency Home">
+          <!-- Note: Convert to WebP and compress -->
+          <img
+            src="assets/images/Untitled design (16).png"
+            alt="Q Marketing Agency Logo"
+            class="h-20"
+            loading="lazy"
+          />
+        </a>
       </div>
       <nav
         class="w-full md:w-auto md:absolute md:inset-x-0 flex justify-center mt-4 md:mt-0"
+        aria-label="Main navigation"
       >
         <ul
           class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-center"
         >
           <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
-          <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+          <li><a href="about.html" class="hover:text-blue-400">About Us</a></li>
           <li>
-            <a href="services.html" class="hover:text-blue-400">Services</a>
+            <a href="services.html" class="hover:text-blue-400">Our Services</a>
           </li>
           <li>
             <a href="case-studies.html" class="hover:text-blue-400"
@@ -46,77 +94,103 @@
             >
           </li>
           <li>
-            <a href="contact.html" class="hover:text-blue-400">Contact</a>
+            <a
+              href="contact.html"
+              class="hover:text-blue-400"
+              aria-current="page"
+              >Contact Us</a
+            >
           </li>
         </ul>
       </nav>
     </header>
 
-    <!-- Typeform Section with Boxed Container -->
-    <section
-      class="typeform-section py-16 bg-gray-900 overflow-hidden"
-      data-aos="fade-up"
-    >
-      <div class="container mx-auto px-6 text-center">
-        <h1 class="text-4xl font-bold mb-6">Get in Touch</h1>
-        <p class="text-lg mb-8 max-w-2xl mx-auto">
-          Ready to start a conversation? Fill out the form below to reach us.
-        </p>
-        <div
-          class="typeform-box bg-gray-800 p-6 rounded-lg shadow-lg max-w-2xl mx-auto"
-        >
+    <main>
+      <!-- Typeform Section -->
+      <section
+        class="typeform-section py-16 bg-gray-900 overflow-hidden"
+        data-aos="fade-up"
+        id="contact-form"
+      >
+        <div class="container mx-auto px-6 text-center">
+          <h1 class="text-4xl font-bold mb-6">Get in Touch With Us</h1>
+          <p class="text-lg mb-8 max-w-2xl mx-auto">
+            Ready to start a conversation? Fill out our form below or
+            <a href="services.html" class="text-blue-400 hover:underline"
+              >explore our services</a
+            >
+            first.
+          </p>
           <div
-            data-tf-live="01JN4TVFGKJD1Z7EJ75AJ8KDSS"
-            style="width: 100%; height: 500px"
-          ></div>
+            class="typeform-box bg-gray-800 p-6 rounded-lg shadow-lg max-w-2xl mx-auto"
+          >
+            <div
+              data-tf-live="01JN4TVFGKJD1Z7EJ75AJ8KDSS"
+              style="width: 100%; height: 500px"
+              aria-label="Contact form"
+            ></div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Information Section -->
-    <section class="contact-info py-16 bg-gray-800" data-aos="fade-up">
-      <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-6 text-center">Contact Information</h2>
-        <p class="text-lg mb-8 text-center max-w-2xl mx-auto">
-          Prefer a direct line? Here’s how to reach us anytime.
-        </p>
-        <div class="max-w-md mx-auto space-y-4">
-          <p>
-            <strong>Email:</strong>
-            <a
-              href="mailto:qmakescontent@gmail.com"
-              class="text-blue-400 hover:underline"
-              >qmakescontent@gmail.com</a
-            >
+      <!-- Contact Information Section -->
+      <section
+        class="contact-info py-16 bg-gray-800"
+        data-aos="fade-up"
+        id="contact-details"
+      >
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold mb-6 text-center">
+            Contact Information
+          </h2>
+          <p class="text-lg mb-8 text-center max-w-2xl mx-auto">
+            Prefer a direct line? Reach us anytime using the details below.
           </p>
-          <p>
-            <strong>Phone:</strong>
-            <a href="tel:+13122038106" class="text-blue-400 hover:underline"
-              >+1 (312) 203-8106</a
-            >
-          </p>
+          <div class="max-w-md mx-auto space-y-4">
+            <p>
+              <strong>Email:</strong>
+              <a
+                href="mailto:qmakescontent@gmail.com"
+                class="text-blue-400 hover:underline"
+                >qmakescontent@gmail.com</a
+              >
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              <a href="tel:+13122038106" class="text-blue-400 hover:underline"
+                >+1 (312) 203-8106</a
+              >
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 py-6" data-aos="fade">
       <div class="w-full px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <img
-            src="assets/images/Untitled design (16).png"
-            alt="Q Marketing Logo"
-            class="h-16"
-          />
+          <a href="/" aria-label="Q Marketing Agency Home">
+            <!-- Note: Convert to WebP and compress -->
+            <img
+              src="assets/images/Untitled design (16).png"
+              alt="Q Marketing Agency Footer Logo"
+              class="h-16"
+              loading="lazy"
+            />
+          </a>
           <p class="text-sm">We humbly create for you.</p>
         </div>
         <div>
-          <h3 class="font-bold mb-2">Newsletter</h3>
-          <p class="text-sm mb-2">Subscribe for updates and insights.</p>
+          <h3 class="font-bold mb-2">Newsletter Signup</h3>
+          <p class="text-sm mb-2">
+            Subscribe for marketing updates and insights.
+          </p>
           <form
             action="https://formspree.io/f/mkgodgjg"
             method="POST"
             class="space-y-2"
+            aria-label="Newsletter subscription"
           >
             <input
               type="email"
@@ -124,18 +198,19 @@
               placeholder="Your email"
               class="w-full p-2 rounded mb-2 text-gray-900"
               required
+              aria-label="Email address"
             />
             <button
               type="submit"
               class="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded text-white font-semibold"
             >
-              Subscribe
+              Subscribe Now
             </button>
           </form>
         </div>
       </div>
       <div class="text-center mt-4 pb-4 text-[10px]">
-        <p>© 2025 Q Marketing. All rights reserved.</p>
+        <p>© 2025 Q Marketing Agency. All rights reserved.</p>
       </div>
     </footer>
 
@@ -149,7 +224,6 @@
     </script>
     <!-- Typeform Script -->
     <script src="//embed.typeform.com/next/embed.js"></script>
-    <!-- Optional JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

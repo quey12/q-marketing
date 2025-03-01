@@ -3,37 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Q Marketing Agency</title>
+    <!-- SEO Optimized Meta Tags -->
+    <title>About Us | Q Marketing Agency - Belief-Driven Marketing</title>
+    <meta
+      name="description"
+      content="Learn about Q Marketing Agency's belief-driven approach to digital marketing, our mission, and meet our team of experts driving transformative brand success."
+    />
+    <meta
+      name="keywords"
+      content="about Q Marketing, belief-driven selling, digital marketing agency, our team, marketing philosophy"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Q Marketing Agency" />
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="About Us | Q Marketing Agency" />
+    <meta
+      property="og:description"
+      content="Discover our philosophy of belief-driven selling and meet the Q Marketing team dedicated to transforming brands."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.qmarketing.com/about.html" />
+    <meta
+      property="og:image"
+      content="https://www.qmarketing.com/assets/images/Untitled design (16).png"
+    />
     <link
       rel="icon"
       type="image/x-icon"
-      href="assets\images\Untitled design (16).png"
+      href="assets/images/Untitled design (16).png"
     />
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- Structured Data (JSON-LD) for Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Q Marketing Agency",
+        "url": "https://www.qmarketing.com",
+        "logo": "https://www.qmarketing.com/assets/images/Untitled design (16).png",
+        "description": "Q Marketing Agency specializes in belief-driven selling to create transformative brand experiences.",
+        "founder": [
+          {
+            "@type": "Person",
+            "name": "Nicholas",
+            "jobTitle": "Founder"
+          },
+          {
+            "@type": "Person",
+            "name": "James",
+            "jobTitle": "Co-Founder"
+          }
+        ],
+        "employee": [
+          {
+            "@type": "Person",
+            "name": "Arturo",
+            "jobTitle": "Strategy Director"
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="bg-gray-900 text-white">
+    <!-- Header -->
     <header
       class="relative container mx-auto px-6 py-4 flex flex-col md:flex-row items-center"
       data-aos="fade"
     >
       <div class="logo">
-        <img
-          src="assets/images/Untitled design (16).png"
-          alt="Q Marketing Logo"
-          class="h-20"
-        />
+        <a href="/" aria-label="Q Marketing Agency Home">
+          <!-- Note: Convert to WebP and compress -->
+          <img
+            src="assets/images/Untitled design (16).png"
+            alt="Q Marketing Agency Logo"
+            class="h-20"
+            loading="lazy"
+          />
+        </a>
       </div>
       <nav
         class="w-full md:w-auto md:absolute md:inset-x-0 flex justify-center mt-4 md:mt-0"
+        aria-label="Main navigation"
       >
         <ul
           class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-center"
         >
           <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
-          <li><a href="about.html" class="hover:text-blue-400">About</a></li>
           <li>
-            <a href="services.html" class="hover:text-blue-400">Services</a>
+            <a href="about.html" class="hover:text-blue-400" aria-current="page"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="services.html" class="hover:text-blue-400">Our Services</a>
           </li>
           <li>
             <a href="case-studies.html" class="hover:text-blue-400"
@@ -41,148 +106,184 @@
             >
           </li>
           <li>
-            <a href="contact.html" class="hover:text-blue-400">Contact</a>
+            <a href="contact.html" class="hover:text-blue-400">Contact Us</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <section
-      class="hero relative h-screen flex items-center overflow-hidden"
-      data-aos="fade"
-    >
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        class="absolute inset-0 w-full h-full object-cover"
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="hero relative h-screen flex items-center overflow-hidden"
+        data-aos="fade"
       >
-        <source src="assets/videos/202312161512.MP4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="relative container mx-auto text-center px-4">
-        <h1 id="typewriter" class="text-5xl font-bold mb-4"></h1>
-      </div>
-    </section>
-
-    <section class="our-philosophy py-16 bg-gray-800" data-aos="fade-up">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">Our Philosophy</h2>
-        <div class="max-w-4xl mx-auto">
-          <p class="text-lg leading-relaxed mb-4">
-            At Q Marketing, we understand that successful selling goes beyond
-            meeting customers’ needs—it’s about shaping a shared vision. Our
-            approach is built on the distinction between
-            <strong>Value-Driven</strong> and
-            <strong>Belief-Driven Selling</strong>.
-          </p>
-          <p class="text-lg leading-relaxed mb-4">
-            <strong>Value-Driven Selling</strong> aligns with what customers
-            prioritize. For example, if you value sustainability, a company will
-            showcase eco-friendly products that support your commitment.
-            Although it may be controversial, we believe this is an outdated
-            approach.
-          </p>
-          <p class="text-lg leading-relaxed mb-4">
-            <strong>Belief-Driven Selling</strong> taps into a deeper narrative.
-            Rather than just acknowledging your values, we build a compelling
-            vision—“We believe sustainable living can transform the planet.”
-            This approach draws customers into a proactive quest, creating a
-            lasting connection based on shared conviction.
-          </p>
-          <p class="text-lg leading-relaxed">
-            In essence, our brands don't just deliver what customers value; we
-            invite them to join us in a transformative journey—a shared mission
-            where belief drives success.
-          </p>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+        >
+          <!-- Note: Optimize video size and consider WebM -->
+          <source src="assets/videos/202312161512.MP4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="relative container mx-auto text-center px-4">
+          <h1 class="text-5xl font-bold mb-4">
+            We Believe in Transforming Brands
+          </h1>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="belief-driven py-16 bg-gray-800" data-aos="fade-up">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">Our Mission</h2>
-        <div class="max-w-3xl mx-auto text-lg leading-relaxed">
-          <p class="mb-4">
-            We harness the power of belief-driven selling to transform products
-            into the default choice. Our approach is designed to help companies
-            own the narrative in their market, becoming Schelling Points—the
-            go-to brands that customers turn to without hesitation.
-          </p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>
-              <strong>Connection:</strong> We augment AI to triangulate
-              customers’ beliefs, giving our brands an edge in their market by
-              being able to deliver exactly what the customer wants.
-            </li>
-            <li>
-              <strong>Relevance:</strong> Our belief-based narrative combined
-              with cutting edge marketing tactics help position products as the
-              "go-to" choice for those who share these convictions.
-            </li>
-            <li>
-              <strong>Global Hustle:</strong> Our strategies start at the
-              micro-level but end at the macro level. When our tools are
-              unleashed, there is no ceiling to where a business can go.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="our-team py-16 bg-gray-800" data-aos="fade-up">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">Our Team</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="team-member text-center">
-            <img
-              src="assets/images/Untitled design (26).png"
-              alt="Team Member"
-              class="mx-auto rounded-full h-60 w-63 object-cover mb-4"
-            />
-            <h3 class="text-2xl font-semibold">Nicholas</h3>
-            <p class="text-sm">Founder</p>
-          </div>
-          <div class="team-member text-center">
-            <img
-              src="assets/images/kIuSfsrzqSrmAfuB-generated_image.jpg"
-              alt="Team Member"
-              class="mx-auto rounded-full h-60 w-42 object-cover mb-4"
-            />
-            <h3 class="text-2xl font-semibold">James</h3>
-            <p class="text-sm">Co-Founder</p>
-          </div>
-          <div class="team-member text-center">
-            <img
-              src="assets/images/sZiFpocc1es4LEg3-generated_image.jpg"
-              alt="Team Member"
-              class="mx-auto rounded-full h-60 w-60 object-cover mb-4"
-            />
-            <h3 class="text-2xl font-semibold">Arturo</h3>
-            <p class="text-sm">Strategy Director</p>
+      <!-- Our Philosophy Section -->
+      <section
+        class="our-philosophy py-16 bg-gray-800"
+        data-aos="fade-up"
+        id="philosophy"
+      >
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center mb-12">Our Philosophy</h2>
+          <div class="max-w-4xl mx-auto">
+            <p class="text-lg leading-relaxed mb-4">
+              At Q Marketing, we understand that successful selling goes beyond
+              meeting customers’ needs—it’s about shaping a shared vision. Our
+              approach is built on the distinction between
+              <strong>Value-Driven</strong> and
+              <strong>Belief-Driven Selling</strong>.
+            </p>
+            <p class="text-lg leading-relaxed mb-4">
+              <strong>Value-Driven Selling</strong> aligns with what customers
+              prioritize. For example, if you value sustainability, a company
+              will showcase eco-friendly products that support your commitment.
+              We consider this approach outdated.
+            </p>
+            <p class="text-lg leading-relaxed mb-4">
+              <strong>Belief-Driven Selling</strong> taps into a deeper
+              narrative. Instead of just acknowledging your values, we build a
+              compelling vision—“We believe sustainable living can transform the
+              planet.” This draws customers into a proactive quest, creating
+              lasting connections.
+            </p>
+            <p class="text-lg leading-relaxed">
+              Our brands invite customers to join a transformative journey—a
+              shared mission where belief drives success.
+              <a href="services.html" class="text-blue-400 hover:underline"
+                >Learn about our services</a
+              >
+              to see this in action.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <!-- Our Mission Section -->
+      <section
+        class="belief-driven py-16 bg-gray-800"
+        data-aos="fade-up"
+        id="mission"
+      >
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center mb-12">Our Mission</h2>
+          <div class="max-w-3xl mx-auto text-lg leading-relaxed">
+            <p class="mb-4">
+              We harness belief-driven selling to make products the default
+              choice, positioning brands as Schelling Points—go-to options
+              customers choose instinctively.
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>
+                <strong>Connection:</strong> We use AI to align with customers’
+                beliefs, giving our brands a market edge.
+              </li>
+              <li>
+                <strong>Relevance:</strong> Our narratives and cutting-edge
+                tactics make products the top choice for believers.
+              </li>
+              <li>
+                <strong>Global Hustle:</strong> From micro to macro, our
+                strategies unlock limitless growth potential.
+              </li>
+            </ul>
+            <p class="mt-4">
+              See our impact in our
+              <a href="case-studies.html" class="text-blue-400 hover:underline"
+                >case studies</a
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Team Section -->
+      <section class="our-team py-16 bg-gray-800" data-aos="fade-up" id="team">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center mb-12">Meet Our Team</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <article class="team-member text-center">
+              <!-- Note: Convert to WebP and compress -->
+              <img
+                src="assets/images/Untitled design (26).png"
+                alt="Nicholas, Founder of Q Marketing Agency"
+                class="mx-auto rounded-full h-60 w-60 object-cover mb-4"
+                loading="lazy"
+              />
+              <h3 class="text-2xl font-semibold">Nicholas</h3>
+              <p class="text-sm">Founder</p>
+            </article>
+            <article class="team-member text-center">
+              <!-- Note: Convert to WebP and compress -->
+              <img
+                src="assets/images/kIuSfsrzqSrmAfuB-generated_image.jpg"
+                alt="James, Co-Founder of Q Marketing Agency"
+                class="mx-auto rounded-full h-60 w-60 object-cover mb-4"
+                loading="lazy"
+              />
+              <h3 class="text-2xl font-semibold">James</h3>
+              <p class="text-sm">Co-Founder</p>
+            </article>
+            <article class="team-member text-center">
+              <!-- Note: Convert to WebP and compress -->
+              <img
+                src="assets/images/sZiFpocc1es4LEg3-generated_image.jpg"
+                alt="Arturo, Strategy Director at Q Marketing Agency"
+                class="mx-auto rounded-full h-60 w-60 object-cover mb-4"
+                loading="lazy"
+              />
+              <h3 class="text-2xl font-semibold">Arturo</h3>
+              <p class="text-sm">Strategy Director</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
     <footer class="bg-gray-900 py-6" data-aos="fade">
       <div class="w-full px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <img
-            src="assets/images/Untitled design (16).png"
-            alt="Q Marketing Logo"
-            class="h-20"
-          />
+          <a href="/" aria-label="Q Marketing Agency Home">
+            <!-- Note: Convert to WebP and compress -->
+            <img
+              src="assets/images/Untitled design (16).png"
+              alt="Q Marketing Agency Footer Logo"
+              class="h-20"
+              loading="lazy"
+            />
+          </a>
           <p class="text-sm">We humbly create for you.</p>
         </div>
         <div>
-          <h3 class="font-bold mb-2">Newsletter</h3>
-          <p class="text-sm mb-2">Subscribe for updates and insights.</p>
+          <h3 class="font-bold mb-2">Newsletter Signup</h3>
+          <p class="text-sm mb-2">
+            Subscribe for marketing updates and insights.
+          </p>
           <form
             action="https://formspree.io/f/mkgodgjg"
             method="POST"
             class="space-y-2"
+            aria-label="Newsletter subscription"
           >
             <input
               type="email"
@@ -190,26 +291,28 @@
               placeholder="Your email"
               class="w-full p-2 rounded mb-2 text-gray-900"
               required
+              aria-label="Email address"
             />
             <button
               type="submit"
               class="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded text-white font-semibold"
             >
-              Subscribe
+              Subscribe Now
             </button>
           </form>
         </div>
       </div>
       <div class="text-center mt-4 pb-4 text-[10px]">
-        <p>© 2025 Q Marketing. All rights reserved.</p>
+        <p>© 2025 Q Marketing Agency. All rights reserved.</p>
       </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 1200, once: true });
     </script>
     <script src="//embed.typeform.com/next/embed.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

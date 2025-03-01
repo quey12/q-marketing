@@ -3,11 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Q Marketing Agency</title>
+    <!-- SEO Optimized Meta Tags -->
+    <title>Portfolio & Case Studies | Q Marketing Agency</title>
+    <meta
+      name="description"
+      content="View Q Marketing Agency's portfolio and case studies showcasing innovative digital marketing projects and success stories for clients like BAYC, UChicago, and more."
+    />
+    <meta
+      name="keywords"
+      content="Q Marketing portfolio, case studies, digital marketing projects, brand success stories"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Q Marketing Agency" />
+    <!-- Open Graph Tags -->
+    <meta
+      property="og:title"
+      content="Portfolio & Case Studies | Q Marketing Agency"
+    />
+    <meta
+      property="og:description"
+      content="Explore our portfolio of creative marketing projects and detailed case studies demonstrating our expertise in digital solutions."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.qmarketing.com/case-studies.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.qmarketing.com/assets/images/Untitled design (16).png"
+    />
     <link
       rel="icon"
       type="image/x-icon"
-      href="assets\images\Untitled design (16).png"
+      href="assets/images/Untitled design (16).png"
     />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +49,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
     <!-- Babel for JSX -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
-    <!-- Custom styles for glass-morphic effect and starfield -->
+    <!-- Structured Data (JSON-LD) for Portfolio -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Q Marketing Agency Portfolio",
+        "description": "A collection of case studies and current projects by Q Marketing Agency.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Q Marketing Agency",
+          "url": "https://www.qmarketing.com",
+          "logo": "https://www.qmarketing.com/assets/images/Untitled design (16).png"
+        },
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "The BAYC Debacle",
+            "url": "https://www.qmarketing.com/case-studies/case-study1.html",
+            "description": "Rebuilding relevance for an NFT brand."
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "College Acceptance",
+            "url": "https://www.qmarketing.com/case-studies/case-study2.html",
+            "description": "Enhancing University of Chicago's digital presence."
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Kaito Conundrum",
+            "url": "https://www.qmarketing.com/case-studies/case-study3.html",
+            "description": "Creating a standout Web3 brand for a former Citadel trader."
+          }
+        ]
+      }
+    </script>
+    <!-- Custom Styles -->
     <style>
       .glass-morphic {
         backdrop-filter: blur(12px);
@@ -28,7 +92,6 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 0.5rem;
       }
-      /* Starfield styles */
       .starfield {
         position: absolute;
         top: 0;
@@ -82,162 +145,205 @@
       data-aos="fade"
     >
       <div class="logo">
-        <img
-          src="assets/images/Untitled design (16).png"
-          alt="Q Marketing Logo"
-          class="h-20"
-        />
+        <a href="/" aria-label="Q Marketing Agency Home">
+          <!-- Note: Convert to WebP and compress -->
+          <img
+            src="assets/images/Untitled design (16).png"
+            alt="Q Marketing Agency Logo"
+            class="h-20"
+            loading="lazy"
+          />
+        </a>
       </div>
       <nav
         class="w-full md:w-auto md:absolute md:inset-x-0 flex justify-center mt-4 md:mt-0"
+        aria-label="Main navigation"
       >
         <ul
           class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-center"
         >
           <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
-          <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+          <li><a href="about.html" class="hover:text-blue-400">About Us</a></li>
           <li>
-            <a href="services.html" class="hover:text-blue-400">Services</a>
+            <a href="services.html" class="hover:text-blue-400">Our Services</a>
           </li>
           <li>
-            <a href="case-studies.html" class="hover:text-blue-400"
+            <a
+              href="case-studies.html"
+              class="hover:text-blue-400"
+              aria-current="page"
               >Case Studies</a
             >
           </li>
           <li>
-            <a href="contact.html" class="hover:text-blue-400">Contact</a>
+            <a href="contact.html" class="hover:text-blue-400">Contact Us</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <!-- Hero Section with Background Video and Overlay Text -->
-    <section
-      class="hero relative h-screen flex items-center overflow-hidden"
-      data-aos="fade"
-    >
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        class="absolute inset-0 w-full h-full object-cover"
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="hero relative h-screen flex items-center overflow-hidden"
+        data-aos="fade"
       >
-        <source src="assets/videos/videoplayback (1).mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <!-- Overlay Text -->
-      <div
-        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50"
-      >
-        <h1
-          id="typewriter"
-          class="text-4xl md:text-6xl font-bold text-center"
-        ></h1>
-      </div>
-    </section>
-
-    <!-- Glass-morphic Project Showcase with Starfield -->
-    <section class="py-16 bg-gray-900 relative" data-aos="fade-up">
-      <div class="starfield">
-        <div class="stars"></div>
-        <div class="stars"></div>
-        <div class="stars"></div>
-      </div>
-      <div class="container mx-auto px-6 relative z-10">
-        <h2 class="text-4xl font-bold text-center mb-12">Current Projects</h2>
-        <!-- React Component will be mounted here -->
-        <div id="feature-showcase" class="mb-16"></div>
-      </div>
-    </section>
-
-    <!-- Portfolio Items Section -->
-    <section class="portfolio py-16 bg-gray-900" data-aos="fade-up">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">Case Studies</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Portfolio Card 1 -->
-          <div
-            class="portfolio-card bg-gray-800 rounded-lg overflow-hidden shadow-lg p-6"
-          >
-            <a href="case-studies/case-study1.html">
-              <img
-                src="assets/images/Untitled design (4).png"
-                alt="Project 1"
-                class="w-full h-40 object-contain transition-transform duration-300 hover:scale-105"
-              />
-            </a>
-            <div class="p-4 text-center">
-              <h3 class="text-2xl font-bold mb-2">The BAYC Debacle</h3>
-              <p class="text-sm">
-                Read how we catapulted a NFT brand back to relevance.
-              </p>
-            </div>
-          </div>
-
-          <!-- Portfolio Card 2 -->
-          <div
-            class="portfolio-card bg-gray-800 rounded-lg overflow-hidden shadow-lg p-6"
-          >
-            <a href="case-studies/case-study2.html">
-              <img
-                src="assets/images/Untitled design (2).png"
-                alt="Project 2"
-                class="w-full h-40 object-contain transition-transform duration-300 hover:scale-105"
-              />
-            </a>
-            <div class="p-4 text-center">
-              <h3 class="text-2xl font-bold mb-2">College Acceptance</h3>
-              <p class="text-sm">
-                The University of Chicago is a world-renowned institution that
-                consistently ranks in the top 10 universities in the world.
-                However, they had a big problem...
-              </p>
-            </div>
-          </div>
-
-          <!-- Portfolio Card 3 -->
-          <div
-            class="portfolio-card bg-gray-800 rounded-lg overflow-hidden shadow-lg p-6"
-          >
-            <a href="case-studies/case-study3.html">
-              <img
-                src="assets/images/Untitled design (5).png"
-                alt="Project 3"
-                class="w-full h-40 object-contain transition-transform duration-300 hover:scale-105"
-              />
-            </a>
-            <div class="p-4 text-center">
-              <h3 class="text-2xl font-bold mb-2">Kaito Conundrum</h3>
-              <p class="text-sm">
-                Yu Hu was a former Citadel trader at the top of his game. He
-                needed a brand that would reflect his success and take the Web3
-                world by storm. We came to help.
-              </p>
-            </div>
-          </div>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+        >
+          <!-- Note: Optimize video size and consider WebM -->
+          <source src="assets/videos/videoplayback (1).mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div
+          class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50"
+        >
+          <h1
+            id="typewriter"
+            class="text-4xl md:text-6xl font-bold text-center"
+          ></h1>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Current Projects Section -->
+      <section
+        class="py-16 bg-gray-900 relative"
+        data-aos="fade-up"
+        id="current-projects"
+      >
+        <div class="starfield">
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+          <h2 class="text-4xl font-bold text-center mb-12">Current Projects</h2>
+          <div id="feature-showcase" class="mb-16"></div>
+        </div>
+      </section>
+
+      <!-- Case Studies Section -->
+      <section
+        class="portfolio py-16 bg-gray-900"
+        data-aos="fade-up"
+        id="case-studies"
+      >
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center mb-12">Our Case Studies</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <article
+              class="portfolio-card bg-gray-800 rounded-lg overflow-hidden shadow-lg p-6"
+            >
+              <a href="case-studies/case-study1.html">
+                <!-- Note: Convert to WebP and compress -->
+                <img
+                  src="assets/images/Untitled design (4).png"
+                  alt="The BAYC Debacle Case Study"
+                  class="w-full h-40 object-contain transition-transform duration-300 hover:scale-105"
+                  loading="lazy"
+                />
+              </a>
+              <div class="p-4 text-center">
+                <h3 class="text-2xl font-bold mb-2">The BAYC Debacle</h3>
+                <p class="text-sm">
+                  Read how we catapulted a NFT brand back to relevance.
+                </p>
+                <a
+                  href="case-studies/case-study1.html"
+                  class="text-blue-400 hover:underline mt-2 inline-block"
+                  >View Full Case Study</a
+                >
+              </div>
+            </article>
+            <article
+              class="portfolio-card bg-gray-800 rounded-lg overflow-hidden shadow-lg p-6"
+            >
+              <a href="case-studies/case-study2.html">
+                <!-- Note: Convert to WebP and compress -->
+                <img
+                  src="assets/images/Untitled design (2).png"
+                  alt="College Acceptance Case Study"
+                  class="w-full h-40 object-contain transition-transform duration-300 hover:scale-105"
+                  loading="lazy"
+                />
+              </a>
+              <div class="p-4 text-center">
+                <h3 class="text-2xl font-bold mb-2">College Acceptance</h3>
+                <p class="text-sm">
+                  Enhancing University of Chicago's digital presence.
+                </p>
+                <a
+                  href="case-studies/case-study2.html"
+                  class="text-blue-400 hover:underline mt-2 inline-block"
+                  >View Full Case Study</a
+                >
+              </div>
+            </article>
+            <article
+              class="portfolio-card bg-gray-800 rounded-lg overflow-hidden shadow-lg p-6"
+            >
+              <a href="case-studies/case-study3.html">
+                <!-- Note: Convert to WebP and compress -->
+                <img
+                  src="assets/images/Untitled design (5).png"
+                  alt="Kaito Conundrum Case Study"
+                  class="w-full h-40 object-contain transition-transform duration-300 hover:scale-105"
+                  loading="lazy"
+                />
+              </a>
+              <div class="p-4 text-center">
+                <h3 class="text-2xl font-bold mb-2">Kaito Conundrum</h3>
+                <p class="text-sm">
+                  Building a standout Web3 brand for a former Citadel trader.
+                </p>
+                <a
+                  href="case-studies/case-study3.html"
+                  class="text-blue-400 hover:underline mt-2 inline-block"
+                  >View Full Case Study</a
+                >
+              </div>
+            </article>
+          </div>
+          <p class="text-center mt-8">
+            <a href="services.html" class="text-blue-400 hover:underline"
+              >Explore our services</a
+            >
+            to see how we can help your brand.
+          </p>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 py-6" data-aos="fade">
       <div class="w-full px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <img
-            src="assets/images/Untitled design (16).png"
-            alt="Q Marketing Logo"
-            class="h-16"
-          />
+          <a href="/" aria-label="Q Marketing Agency Home">
+            <!-- Note: Convert to WebP and compress -->
+            <img
+              src="assets/images/Untitled design (16).png"
+              alt="Q Marketing Agency Footer Logo"
+              class="h-16"
+              loading="lazy"
+            />
+          </a>
           <p class="text-sm">We humbly create for you.</p>
         </div>
         <div>
-          <h3 class="font-bold mb-2">Newsletter</h3>
-          <p class="text-sm mb-2">Subscribe for updates and insights.</p>
+          <h3 class="font-bold mb-2">Newsletter Signup</h3>
+          <p class="text-sm mb-2">
+            Subscribe for marketing updates and insights.
+          </p>
           <form
             action="https://formspree.io/f/mkgodgjg"
             method="POST"
             class="space-y-2"
+            aria-label="Newsletter subscription"
           >
             <input
               type="email"
@@ -245,18 +351,19 @@
               placeholder="Your email"
               class="w-full p-2 rounded mb-2 text-gray-900"
               required
+              aria-label="Email address"
             />
             <button
               type="submit"
               class="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded text-white font-semibold"
             >
-              Subscribe
+              Subscribe Now
             </button>
           </form>
         </div>
       </div>
       <div class="text-center mt-4 pb-4 text-[10px]">
-        <p>© 2025 Q Marketing. All rights reserved.</p>
+        <p>© 2025 Q Marketing Agency. All rights reserved.</p>
       </div>
     </footer>
 
@@ -264,7 +371,6 @@
     <script type="text/babel">
       const FeatureShowcase = () => {
         const [expandedIndex, setExpandedIndex] = React.useState(null);
-
         const features = [
           {
             title: "Crossfit Houston",
@@ -307,22 +413,18 @@
                   onMouseLeave={() => setExpandedIndex(null)}
                 >
                   <div
-                    className={`
-                      absolute inset-0 flex items-center justify-center
-                      transition-opacity duration-300
-                      ${expandedIndex === index ? "opacity-0" : "opacity-100"}
-                    `}
+                    className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
+                      expandedIndex === index ? "opacity-0" : "opacity-100"
+                    }`}
                   >
                     <div className="transform -rotate-90 whitespace-nowrap font-bold text-white text-xl">
                       {feature.title}
                     </div>
                   </div>
                   <div
-                    className={`
-                      absolute inset-0 p-6 flex flex-col
-                      transition-opacity duration-300
-                      ${expandedIndex === index ? "opacity-100" : "opacity-0"}
-                    `}
+                    className={`absolute inset-0 p-6 flex flex-col transition-opacity duration-300 ${
+                      expandedIndex === index ? "opacity-100" : "opacity-0"
+                    }`}
                   >
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {feature.title}
@@ -333,8 +435,9 @@
                     <div className="mt-auto">
                       <img
                         src={feature.image}
-                        alt={feature.title}
+                        alt={`${feature.title} Project Image`}
                         className="w-full h-64 object-cover rounded-md mb-4"
+                        loading="lazy"
                       />
                       <a
                         href={feature.link}
@@ -350,20 +453,16 @@
           </div>
         );
       };
-
       ReactDOM.render(
         <FeatureShowcase />,
         document.getElementById("feature-showcase")
       );
     </script>
 
-    <!-- AOS JS -->
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1200,
-        once: true,
-      });
+      AOS.init({ duration: 1200, once: true });
       var typed = new Typed("#typewriter", {
         strings: [
           "Discover our innovative projects",
@@ -374,24 +473,21 @@
         loop: true,
         backDelay: 2000,
       });
-
-      // Generate stars dynamically
       function createStars() {
         const starLayers = document.querySelectorAll(".stars");
         starLayers.forEach((layer) => {
-          const starCount = Math.floor(Math.random() * 50) + 50; // 50-100 stars per layer
+          const starCount = Math.floor(Math.random() * 50) + 50;
           for (let i = 0; i < starCount; i++) {
             const star = document.createElement("div");
             star.style.left = `${Math.random() * 100}%`;
-            star.style.top = `${Math.random() * 200}vh`; // Extra height for continuous animation
-            star.style.animationDelay = `${Math.random() * -50}s`; // Random start
+            star.style.top = `${Math.random() * 200}vh`;
+            star.style.animationDelay = `${Math.random() * -50}s`;
             layer.appendChild(star);
           }
         });
       }
       window.onload = createStars;
     </script>
-    <!-- Optional JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

@@ -3,240 +3,291 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Optimized Meta Tags -->
     <title>Case Study: Bored Ape Yacht Club | Q Marketing Agency</title>
+    <meta
+      name="description"
+      content="Learn how Q Marketing Agency transformed Bored Ape Yacht Club into a digital powerhouse with belief-driven selling, boosting engagement by 40%."
+    />
+    <meta
+      name="keywords"
+      content="Bored Ape Yacht Club case study, Q Marketing, belief-driven selling, NFT marketing, digital branding"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Q Marketing Agency" />
+    <!-- Open Graph Tags -->
+    <meta
+      property="og:title"
+      content="Case Study: Bored Ape Yacht Club | Q Marketing Agency"
+    />
+    <meta
+      property="og:description"
+      content="Discover how we elevated BAYC into a cultural icon with innovative NFT marketing strategies."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://www.qmarketing.com/case-studies/bored-ape-yacht-club.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.qmarketing.com/assets/images/Untitled design (4).png"
+    />
     <link
       rel="icon"
       type="image/x-icon"
-      href="assets\images\Untitled design (16).png"
+      href="assets/images/Untitled design (16).png"
     />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS CSS for animations -->
+    <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <!-- Optionally include your custom CSS -->
-    <!-- <link rel="stylesheet" href="../../css/main.css" /> -->
+    <!-- Structured Data (JSON-LD) for Case Study -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Bored Ape Yacht Club Case Study",
+        "url": "https://www.qmarketing.com/case-studies/bored-ape-yacht-club.html",
+        "description": "A case study on how Q Marketing Agency transformed Bored Ape Yacht Club using belief-driven selling.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Q Marketing Agency",
+          "url": "https://www.qmarketing.com",
+          "logo": "https://www.qmarketing.com/assets/images/Untitled design (16).png"
+        },
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Bored Ape Yacht Club",
+          "description": "A revolutionary NFT project and cultural phenomenon in the crypto space."
+        },
+        "datePublished": "2025-03-01",
+        "image": "https://www.qmarketing.com/assets/images/Untitled design (4).png"
+      }
+    </script>
   </head>
   <body class="bg-gray-900 text-white">
-    <!-- Header (reuse your site's header) -->
+    <!-- Header -->
     <header
       class="relative container mx-auto px-6 py-4 flex items-center"
       data-aos="fade"
     >
       <div class="logo">
-        <img
-          src="assets\images\Untitled design (16).png"
-          alt="Q Marketing Logo"
-          class="h-16"
-        />
+        <a href="/" aria-label="Q Marketing Agency Home">
+          <!-- Note: Convert to WebP and compress -->
+          <img
+            src="../assets/images/Untitled design (16).png"
+            alt="Q Marketing Agency Logo"
+            class="h-16"
+            loading="lazy"
+          />
+        </a>
       </div>
-      <nav class="absolute inset-x-0 flex justify-center">
+      <nav
+        class="absolute inset-x-0 flex justify-center"
+        aria-label="Main navigation"
+      >
         <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+          <li><a href="about.html" class="hover:text-blue-400">About Us</a></li>
           <li>
-            <a href="../../index.html" class="hover:text-blue-400">Home</a>
+            <a href="services.html" class="hover:text-blue-400">Our Services</a>
           </li>
           <li>
-            <a href="../../about.html" class="hover:text-blue-400">About</a>
-          </li>
-          <li>
-            <a href="../../services.html" class="hover:text-blue-400"
-              >Services</a
+            <a
+              href="case-studies.html"
+              class="hover:text-blue-400"
+              aria-current="page"
+              >Case Studies</a
             >
           </li>
           <li>
-            <a href="../../portfolio.html" class="hover:text-blue-400"
-              >Portfolio</a
-            >
-          </li>
-          <li>
-            <a href="../../contact.html" class="hover:text-blue-400">Contact</a>
+            <a href="contact.html" class="hover:text-blue-400">Contact Us</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <!-- Case Study Hero Section -->
-    <section
-      class="case-study-hero relative h-80 flex items-center justify-center bg-gray-800"
-      data-aos="fade"
-    >
-      <div class="container mx-auto text-center px-4">
-        <h1 class="text-5xl font-bold mb-4">Bored Ape Yacht Club</h1>
-        <p class="text-xl">
-          Transforming a Cultural Icon into a Digital Powerhouse
-        </p>
-      </div>
-    </section>
-
-    <!-- Case Study Details -->
-    <section class="case-study-details py-16 bg-gray-900" data-aos="fade-up">
-      <div class="container mx-auto px-6 max-w-4xl">
-        <!-- Background / Context -->
-        <div class="mb-12">
-          <h2 class="text-3xl font-bold mb-4">Background & Context</h2>
-          <p class="text-lg leading-relaxed mb-4">
-            Bored Ape Yacht Club (BAYC) is a revolutionary NFT project that has
-            redefined digital community and luxury branding in the crypto space.
-            With thousands of unique, algorithmically generated apes and a
-            passionate global community, BAYC became more than just digital
-            art—it became a cultural phenomenon.
-          </p>
-          <p class="text-lg leading-relaxed">
-            As BAYC evolved, the need arose to transform its digital presence
-            and narrative to solidify its position as the Schelling Point for
-            NFT enthusiasts and luxury brands alike.
+    <main>
+      <!-- Case Study Hero Section -->
+      <section
+        class="case-study-hero relative h-80 flex items-center justify-center bg-gray-800"
+        data-aos="fade"
+      >
+        <div class="container mx-auto text-center px-4">
+          <h1 class="text-5xl font-bold mb-4">Bored Ape Yacht Club</h1>
+          <p class="text-xl">
+            Transforming a Cultural Icon into a Digital Powerhouse
           </p>
         </div>
+      </section>
 
-        <!-- Challenges -->
-        <div class="mb-12">
-          <h2 class="text-3xl font-bold mb-4">Challenges</h2>
-          <ul class="list-disc pl-6 text-lg space-y-2">
-            <li>
-              <strong>Market Saturation:</strong> With the NFT space booming,
-              distinguishing BAYC from emerging competitors was crucial.
-            </li>
-            <li>
-              <strong>Narrative Ownership:</strong> Establishing BAYC as not
-              just a collection of art, but as the cultural standard-bearer.
-            </li>
-            <li>
-              <strong>Community Engagement:</strong> Ensuring the digital
-              experience resonated with a diverse, global audience.
-            </li>
-          </ul>
+      <!-- Case Study Details -->
+      <section
+        class="case-study-details py-16 bg-gray-900"
+        data-aos="fade-up"
+        id="bayc-case-study"
+      >
+        <div class="container mx-auto px-6 max-w-4xl">
+          <article class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Background & Context</h2>
+            <p class="text-lg leading-relaxed mb-4">
+              Bored Ape Yacht Club (BAYC) is a groundbreaking NFT project of
+              unique, algorithmically generated apes that became a global
+              cultural phenomenon.
+            </p>
+            <p class="text-lg leading-relaxed">
+              Q Marketing aimed to solidify BAYC as the Schelling Point for NFT
+              enthusiasts and luxury brands.
+              <a
+                href="about.html#philosophy"
+                class="text-blue-400 hover:underline"
+                >Learn about our belief-driven approach</a
+              >.
+            </p>
+          </article>
+
+          <article class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Challenges</h2>
+            <ul class="list-disc pl-6 text-lg space-y-2">
+              <li>
+                <strong>Market Saturation:</strong> Standing out in a booming
+                NFT market.
+              </li>
+              <li>
+                <strong>Narrative Ownership:</strong> Positioning BAYC as the
+                cultural standard-bearer.
+              </li>
+              <li>
+                <strong>Community Engagement:</strong> Resonating with a
+                diverse, global audience.
+              </li>
+            </ul>
+          </article>
+
+          <article class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Our Strategy</h2>
+            <p class="text-lg leading-relaxed mb-4">
+              We used belief-driven selling to make BAYC the ultimate choice for
+              those sharing its bold vision.
+            </p>
+            <ul class="list-disc pl-6 text-lg space-y-2">
+              <li>
+                <strong>Belief-Driven Messaging:</strong> Positioning BAYC as a
+                digital revolution symbol.
+              </li>
+              <li>
+                <strong>Digital Experience Transformation:</strong> Creating an
+                immersive platform.
+              </li>
+              <li>
+                <strong>Community-Centric Campaigns:</strong> Celebrating shared
+                values.
+              </li>
+            </ul>
+          </article>
+
+          <article class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Implementation</h2>
+            <p class="text-lg leading-relaxed mb-4">Our team executed:</p>
+            <ul class="list-disc pl-6 text-lg space-y-2">
+              <li>
+                <strong>Website Redesign:</strong> A sleek platform with dynamic
+                storytelling.
+              </li>
+              <li>
+                <strong>Brand Narrative Workshop:</strong> Unified message with
+                stakeholders.
+              </li>
+              <li>
+                <strong>Integrated Marketing Campaigns:</strong> Amplified
+                across digital channels.
+              </li>
+              <li>
+                <strong>Performance Analytics:</strong> Real-time strategy
+                iteration.
+              </li>
+            </ul>
+          </article>
+
+          <article class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Results & Outcomes</h2>
+            <ul class="list-disc pl-6 text-lg space-y-2">
+              <li>
+                <strong>Increased Engagement:</strong> 40%+ growth in traffic
+                and interaction.
+              </li>
+              <li>
+                <strong>Brand Dominance:</strong> Became the cultural default in
+                NFTs.
+              </li>
+              <li>
+                <strong>Market Expansion:</strong> Attracted new luxury brand
+                partners.
+              </li>
+            </ul>
+          </article>
+
+          <article>
+            <h2 class="text-3xl font-bold mb-4">Key Takeaways</h2>
+            <p class="text-lg leading-relaxed">
+              Belief-driven selling turned BAYC into a dominant cultural force,
+              proving shared convictions can create industry icons.
+              <a href="contact.html" class="text-blue-400 hover:underline"
+                >Contact us</a
+              >
+              to redefine your brand.
+            </p>
+          </article>
         </div>
+      </section>
+    </main>
 
-        <!-- Strategy -->
-        <div class="mb-12">
-          <h2 class="text-3xl font-bold mb-4">Our Strategy</h2>
-          <p class="text-lg leading-relaxed mb-4">
-            We leveraged our expertise in belief-driven selling to reshape
-            BAYC's narrative, positioning it as the ultimate choice for those
-            who share a bold vision for digital art and community. Our strategy
-            centered around:
-          </p>
-          <ul class="list-disc pl-6 text-lg space-y-2">
-            <li>
-              <strong>Belief-Driven Messaging:</strong> Crafting a compelling
-              narrative that positioned BAYC as a symbol of digital revolution
-              and cultural unity.
-            </li>
-            <li>
-              <strong>Digital Experience Transformation:</strong> Redesigning
-              the website and interactive elements to create an immersive,
-              engaging platform for community interaction.
-            </li>
-            <li>
-              <strong>Community-Centric Campaigns:</strong> Launching targeted
-              campaigns that celebrated the shared beliefs and values of the
-              BAYC community, reinforcing its status as the default cultural
-              reference.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Implementation -->
-        <div class="mb-12">
-          <h2 class="text-3xl font-bold mb-4">Implementation</h2>
-          <p class="text-lg leading-relaxed mb-4">
-            Our multidisciplinary team executed the transformation through:
-          </p>
-          <ul class="list-disc pl-6 text-lg space-y-2">
-            <li>
-              <strong>Website Redesign:</strong> Developed a sleek, interactive
-              platform featuring dynamic storytelling elements, animated
-              visuals, and a futuristic user interface.
-            </li>
-            <li>
-              <strong>Brand Narrative Workshop:</strong> Collaborated with BAYC
-              stakeholders and community leaders to define a unified,
-              belief-driven message.
-            </li>
-            <li>
-              <strong>Integrated Marketing Campaigns:</strong> Launched social
-              media and content marketing initiatives that amplified the new
-              narrative across digital channels.
-            </li>
-            <li>
-              <strong>Performance Analytics:</strong> Monitored engagement and
-              conversion metrics to iterate on the strategy in real time.
-            </li>
-          </ul>
-
-          <p class="text-lg leading-relaxed mt-4">
-            Every step was designed to ensure that the redefined digital
-            experience would resonate with both existing members and potential
-            new enthusiasts.
-          </p>
-        </div>
-
-        <!-- Results & Outcomes -->
-        <div class="mb-12">
-          <h2 class="text-3xl font-bold mb-4">Results & Outcomes</h2>
-          <ul class="list-disc pl-6 text-lg space-y-2">
-            <li>
-              <strong>Increased Engagement:</strong> Website traffic and user
-              interaction grew by over 40%, with significant upticks in
-              time-on-site and social shares.
-            </li>
-            <li>
-              <strong>Brand Dominance:</strong> BAYC solidified its position as
-              the cultural default in the NFT space, becoming the go-to
-              reference for digital art and community.
-            </li>
-            <li>
-              <strong>Market Expansion:</strong> The belief-driven narrative
-              attracted new partners and luxury brands, enhancing BAYC’s market
-              reach.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Key Takeaways -->
-        <div>
-          <h2 class="text-3xl font-bold mb-4">Key Takeaways</h2>
-          <p class="text-lg leading-relaxed">
-            Belief-Driven Selling is not just a marketing strategy—it’s a
-            pathway to creating cultural icons. By aligning products with shared
-            convictions, companies can become the Schelling Point in their
-            industry. For BAYC, this approach transformed a groundbreaking NFT
-            project into a dominant cultural force.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer (reuse site's footer) -->
+    <!-- Footer -->
     <footer class="bg-gray-900 py-6" data-aos="fade">
       <div class="w-full px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <img
-            src="../../assets/images/logo.png"
-            alt="Q Marketing Logo"
-            class="h-16"
-          />
+          <a href="/" aria-label="Q Marketing Agency Home">
+            <!-- Note: Corrected path and optimized -->
+            <img
+              src="assets/images/Untitled design (16).png"
+              alt="Q Marketing Agency Footer Logo"
+              class="h-16"
+              loading="lazy"
+            />
+          </a>
           <p class="text-sm">We humbly create for you.</p>
         </div>
         <div>
-          <h3 class="font-bold mb-2">Newsletter</h3>
-          <p class="text-sm mb-2">Subscribe for updates and insights.</p>
-          <form>
+          <h3 class="font-bold mb-2">Newsletter Signup</h3>
+          <p class="text-sm mb-2">
+            Subscribe for marketing updates and insights.
+          </p>
+          <form
+            action="https://formspree.io/f/mkgodgjg"
+            method="POST"
+            class="space-y-2"
+            aria-label="Newsletter subscription"
+          >
             <input
               type="email"
+              name="email"
               placeholder="Your email"
               class="w-full p-2 rounded mb-2 text-gray-900"
+              required
+              aria-label="Email address"
             />
             <button
               type="submit"
-              class="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded"
+              class="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded text-white font-semibold"
             >
-              Subscribe
+              Subscribe Now
             </button>
           </form>
         </div>
       </div>
       <div class="text-center mt-8 text-xs">
-        <p>&copy; 2025 Q Marketing. All rights reserved.</p>
+        <p>© 2025 Q Marketing Agency. All rights reserved.</p>
       </div>
     </footer>
 
@@ -248,7 +299,6 @@
         once: true,
       });
     </script>
-    <!-- Optional JavaScript -->
-    <script src="../../js/main.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
