@@ -24,11 +24,11 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://www.qmarketing.com/services.html"
+      content="https://www.qmakescontent.com/services.html"
     />
     <meta
       property="og:image"
-      content="https://www.qmarketing.com/assets/images/Untitled design (16).png"
+      content="https://www.qmakescontent.com/assets/images/Untitled design (16).png"
     />
     <link
       rel="icon"
@@ -50,8 +50,8 @@
         "provider": {
           "@type": "Organization",
           "name": "Q Marketing Agency",
-          "url": "https://www.qmarketing.com",
-          "logo": "https://www.qmarketing.com/assets/images/Untitled design (16).png"
+          "url": "https://www.qmakescontent.com",
+          "logo": "https://www.qmakescontent.com/assets/images/Untitled design (16).png"
         },
         "offers": [
           {
@@ -135,21 +135,41 @@
     </header>
 
     <main>
-      <!-- Hero Section -->
+      <!-- Hero Section with Updated Video -->
       <section
         class="hero relative h-screen flex items-center overflow-hidden"
         data-aos="fade"
       >
         <video
+          id="hero-video"
           autoplay
           muted
           loop
           playsinline
+          preload="auto"
           class="absolute inset-0 w-full h-full object-cover"
           aria-hidden="true"
+          poster="assets/images/video-poster.jpg"
+          <!--
+          Fallback
+          image
+          if
+          video
+          fails
+          to
+          load
+          --
         >
-          <!-- Note: Optimize video size and consider WebM format -->
-          <source src="assets/videos/videoplayback.mp4" type="video/mp4" />
+          >
+          <!-- Absolute URLs with updated video name -->
+          <source
+            src="https://www.qmakescontent.com/assets/videos/videoplayback1.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="https://www.qmakescontent.com/assets/videos/videoplayback1.webm"
+            type="video/webm"
+          />
           Your browser does not support the video tag.
         </video>
         <div
@@ -160,6 +180,14 @@
             class="text-4xl md:text-6xl font-bold text-center"
           ></h1>
         </div>
+        <!-- Fallback Play Button -->
+        <button
+          id="play-video-btn"
+          onclick="document.getElementById('hero-video').play()"
+          class="absolute z-10 text-white bg-blue-500 p-2 rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden"
+        >
+          Play Video
+        </button>
       </section>
 
       <!-- Detailed Services Section -->
@@ -368,6 +396,30 @@
         backSpeed: 25,
         loop: true,
         backDelay: 2000,
+      });
+
+      // Ensure video plays on mobile with fallback
+      document.addEventListener("DOMContentLoaded", function () {
+        var video = document.getElementById("hero-video");
+        var playButton = document.getElementById("play-video-btn");
+
+        // Attempt to play the video
+        video.play().catch(function (error) {
+          console.log("Autoplay failed: ", error);
+          // Show play button if autoplay fails
+          playButton.classList.remove("hidden");
+          // Retry after a delay
+          setTimeout(function () {
+            video.play().catch(function (retryError) {
+              console.log("Retry failed: ", retryError);
+            });
+          }, 1000);
+        });
+
+        // Hide play button if video starts playing
+        video.onplaying = function () {
+          playButton.classList.add("hidden");
+        };
       });
     </script>
     <script src="js/main.js" defer></script>
