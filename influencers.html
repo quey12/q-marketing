@@ -218,24 +218,44 @@
         </div>
       </section>
 
-      <!-- Typeform Section -->
-      <section class="typeform-section py-16 bg-gray-900" data-aos="fade-up">
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-4xl font-bold mb-6">Ready to Grow Together?</h2>
-          <p class="text-lg mb-8 max-w-2xl mx-auto">
-            Tell us about yourself and your goals. Let’s build something amazing
-            and grow your influence with brands that matter.
-          </p>
-          <div class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+      <!-- New Get Quote Section with Typeform and Calendly -->
+      <section class="py-16 bg-gray-900" data-aos="fade-up" id="get-quote">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold mb-4">
+              Start Your Influencer Journey
+            </h2>
+            <p class="text-lg">
+              Request a collaboration quote or schedule a consultation to grow
+              your influence with Q Marketing today.
+            </p>
+          </div>
+          <div class="flex flex-col md:flex-row justify-center gap-8">
             <div
-              data-tf-live="01JNFF8E01ABGFRZ5WN78G0KB2"
-              style="width: 100%; height: 500px"
-            ></div>
+              class="typeform-container bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2"
+            >
+              <h3 class="text-2xl font-bold mb-4 text-center">Get a Quote</h3>
+              <div
+                data-tf-live="01JNCCFVFW27VPTNMKFYY8PRGX"
+                style="width: 100%; height: 500px"
+              ></div>
+            </div>
+            <div
+              class="calendly-container bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2"
+            >
+              <h3 class="text-2xl font-bold mb-4 text-center">
+                Schedule a Consultation
+              </h3>
+              <div
+                class="calendly-inline-widget"
+                data-url="https://calendly.com/nquaranta-sparklecleanpronj"
+                style="min-width: 320px; height: 700px"
+              ></div>
+            </div>
           </div>
         </div>
       </section>
-    </main>
-
+      
     <!-- Footer -->
     <footer class="bg-gray-900 py-6" data-aos="fade">
       <div class="w-full px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -291,8 +311,13 @@
         once: true,
       });
     </script>
-    <!-- Typeform Embed Script -->
+    <!-- Typeform and Calendly Scripts -->
     <script src="//embed.typeform.com/next/embed.js"></script>
+    <script
+      type="text/javascript"
+      src="https://assets.calendly.com/assets/external/widget.js"
+      async
+    ></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>
