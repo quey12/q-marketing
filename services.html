@@ -39,84 +39,118 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <!-- Typed.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <!-- Structured Data (JSON-LD) for Services -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Digital Marketing",
-        "provider": {
-          "@type": "Organization",
-          "name": "Q Marketing Agency",
-          "url": "https://www.qmakescontent.com",
-          "logo": "https://www.qmakescontent.com/assets/images/Untitled design (16).png"
-        },
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "Seed Sprint",
-            "description": "Rapid brand identity and digital presence for startups."
-          },
-          {
-            "@type": "Offer",
-            "name": "Product Sprint",
-            "description": "Refine product design and UX for MVP-stage businesses."
-          },
-          {
-            "@type": "Offer",
-            "name": "Brand Creation",
-            "description": "Comprehensive branding services for a cohesive identity."
-          },
-          {
-            "@type": "Offer",
-            "name": "Rebranding Services",
-            "description": "Rebuild reputation and relevance with a new narrative."
-          },
-          {
-            "@type": "Offer",
-            "name": "Subscription Service",
-            "description": "Ongoing marketing support and tailored solutions."
-          },
-          {
-            "@type": "Offer",
-            "name": "One Day Service",
-            "description": "Immediate marketing solutions in a single day."
-          },
-          {
-            "@type": "Offer",
-            "name": "Consulting Service",
-            "description": "Strategic growth consulting to accelerate your business success."
-          }
-        ]
+    <style>
+      /* Glassmorphism styling */
+      .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+        transform: translateZ(0);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 500px; /* Adjust as needed */
       }
-    </script>
+
+      .glass-card:hover {
+        transform: scale(1.02) translateY(-10px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .glass-card .details {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+      }
+
+      .glass-card:hover .details {
+        max-height: 300px; /* Adjust based on content */
+      }
+
+      /* Space Background with Stars */
+      body {
+        background: radial-gradient(circle at center, #0d1b2a 0%, #000000 100%);
+        position: relative;
+        min-height: 100vh; /* Ensures body takes at least full viewport height */
+        overflow-y: auto; /* Enables vertical scrolling */
+      }
+
+      /* Stars Layer */
+      body::before {
+        content: "";
+        position: fixed; /* Fixed to stay in background while scrolling */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="1" fill="white" opacity="0.8"/></svg>')
+          repeat;
+        animation: twinkle 10s infinite linear;
+        opacity: 0.8;
+        z-index: -2; /* Behind content */
+      }
+
+      body::after {
+        content: "";
+        position: fixed; /* Fixed to stay in background while scrolling */
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150"><circle cx="75" cy="75" r="2" fill="white" opacity="0.5"/></svg>')
+          repeat;
+        animation: drift 30s infinite linear;
+        opacity: 0.5;
+        z-index: -1; /* Behind content but above smaller stars */
+      }
+
+      @keyframes twinkle {
+        0% {
+          opacity: 0.8;
+        }
+        50% {
+          opacity: 0.3;
+        }
+        100% {
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes drift {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .services-container {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        max-width: 600px;
+        margin: 2rem auto;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 1; /* Ensures container is above background layers */
+      }
+    </style>
   </head>
-  <body class="bg-gray-900 text-white">
-    <!-- Header -->
+  <body class="text-white">
+    <!-- Header (Logo Removed) -->
     <header
-      class="relative container mx-auto px-6 py-4 flex flex-col md:flex-row items-center"
+      class="container mx-auto px-6 py-4 flex justify-end items-center"
       data-aos="fade"
     >
-      <div class="logo">
-        <a href="/" aria-label="Q Marketing Agency Home">
-          <!-- Note: Convert to WebP and compress for better performance -->
-          <img
-            src="assets/images/Untitled design (16).png"
-            alt="Q Marketing Agency Logo"
-            class="h-20"
-            loading="lazy"
-          />
-        </a>
-      </div>
-      <nav
-        class="w-full md:w-auto md:absolute md:inset-x-0 flex justify-center mt-4 md:mt-0"
-        aria-label="Main navigation"
-      >
-        <ul
-          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-center"
-        >
+      <nav aria-label="Main navigation">
+        <ul class="flex space-x-6">
           <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
           <li><a href="about.html" class="hover:text-blue-400">About Us</a></li>
           <li>
@@ -125,11 +159,6 @@
               class="hover:text-blue-400"
               aria-current="page"
               >Our Services</a
-            >
-          </li>
-          <li>
-            <a href="case-studies.html" class="hover:text-blue-400"
-              >Case Studies</a
             >
           </li>
           <li>
@@ -145,222 +174,137 @@
     </header>
 
     <main>
-      <!-- Hero Section with Updated Video -->
-      <section
-        class="hero relative h-screen flex items-center overflow-hidden"
-        data-aos="fade"
-      >
-        <video
-          id="hero-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          class="absolute inset-0 w-full h-full object-cover"
-          aria-hidden="true"
-          poster="assets/images/video-poster.jpg"
-        >
-          <!-- Absolute URLs with updated video name -->
-          <source
-            src="https://www.qmakescontent.com/assets/videos/videoplayback1.mp4"
-            type="video/mp4"
-          />
-          <source
-            src="https://www.qmakescontent.com/assets/videos/videoplayback1.webm"
-            type="video/webm"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <div
-          class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50"
-        >
-          <h1
-            id="typewriter"
-            class="text-4xl md:text-6xl font-bold text-center"
-          ></h1>
+      <!-- Services Section with Single Vertical Container -->
+      <section class="services-container" data-aos="fade-up" id="services">
+        <h2 class="text-4xl font-bold text-center mb-8">Take Your Pick</h2>
+        <!-- Service Cards -->
+        <div class="glass-card p-6">
+          <h3 class="text-2xl font-bold mb-4">Seed Sprint</h3>
+          <div class="details">
+            <p class="mb-4">
+              Tailored for early-stage startups to rapidly build brand identity
+              and digital presence.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>One-month brand identity sprint</li>
+              <li>Market research & competitor analysis</li>
+              <li>Custom logo & visual identity</li>
+              <li>Compelling brand narrative</li>
+              <li>Rapid prototyping & iteration</li>
+            </ul>
+          </div>
         </div>
-        <!-- Fallback Play Button -->
-        <button
-          id="play-video-btn"
-          onclick="document.getElementById('hero-video').play()"
-          class="absolute z-10 text-white bg-blue-500 p-2 rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden"
-        >
-          Play Video
-        </button>
-      </section>
 
-      <!-- Detailed Services Section with Consulting Added -->
-      <section
-        class="detailed-services py-16 bg-gray-900"
-        data-aos="fade-up"
-        id="services"
-      >
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-center mb-12">
-            Our Marketing Services
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <article
-              class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
-            >
-              <h3 class="text-2xl font-bold mb-4">Seed Sprint</h3>
-              <p class="mb-4">
-                Tailored for early-stage startups to rapidly build brand
-                identity and digital presence.
-              </p>
-              <ul class="list-disc pl-5 text-lg">
-                <li>One-month brand identity sprint</li>
-                <li>Market research & competitor analysis</li>
-                <li>Custom logo & visual identity</li>
-                <li>Compelling brand narrative</li>
-                <li>Rapid prototyping & iteration</li>
-              </ul>
-              <a
-                href="case-studies.html#seed-sprint"
-                class="text-blue-400 hover:underline mt-2 inline-block"
-                >See Case Study</a
-              >
-            </article>
-            <article
-              class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
-            >
-              <h3 class="text-2xl font-bold mb-4">Product Sprint</h3>
-              <p class="mb-4">
-                Ideal for startups with an MVP needing refined product design
-                and UX.
-              </p>
-              <ul class="list-disc pl-5 text-lg">
-                <li>Rapid user testing & feedback</li>
-                <li>UX/UI enhancements & mockups</li>
-                <li>Interactive prototypes</li>
-                <li>Customer insights integration</li>
-                <li>Scalable design system</li>
-              </ul>
-              <a
-                href="case-studies.html#product-sprint"
-                class="text-blue-400 hover:underline mt-2 inline-block"
-                >See Case Study</a
-              >
-            </article>
-            <article
-              class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
-            >
-              <h3 class="text-2xl font-bold mb-4">Brand Creation</h3>
-              <p class="mb-4">
-                Comprehensive package to bring your vision to life with full
-                branding services.
-              </p>
-              <ul class="list-disc pl-5 text-lg">
-                <li>End-to-end brand identity</li>
-                <li>Visual & verbal strategy</li>
-                <li>Custom logo & typography</li>
-                <li>Brand guidelines & assets</li>
-                <li>Website & digital experience</li>
-              </ul>
-              <a
-                href="case-studies.html#brand-creation"
-                class="text-blue-400 hover:underline mt-2 inline-block"
-                >See Case Study</a
-              >
-            </article>
-            <article
-              class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
-            >
-              <h3 class="text-2xl font-bold mb-4">Rebranding Services</h3>
-              <p class="mb-4">
-                Rebuild reputation and relevance after setbacks with a new
-                narrative.
-              </p>
-              <ul class="list-disc pl-5 text-lg">
-                <li>Brand identity overhaul</li>
-                <li>Perception analysis & repositioning</li>
-                <li>Social media realignment</li>
-                <li>New visuals & messaging</li>
-                <li>Media & PR campaign</li>
-              </ul>
-              <a
-                href="case-studies.html#rebranding"
-                class="text-blue-400 hover:underline mt-2 inline-block"
-                >See Case Study</a
-              >
-            </article>
-            <article
-              class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
-            >
-              <h3 class="text-2xl font-bold mb-4">Subscription Service</h3>
-              <p class="mb-4">
-                Ongoing support and tailored marketing solutions to stay ahead.
-              </p>
-              <ul class="list-disc pl-5 text-lg">
-                <li>Monthly strategy sessions</li>
-                <li>Performance monitoring</li>
-                <li>Regular content updates</li>
-                <li>Dedicated account manager</li>
-                <li>Priority support</li>
-              </ul>
-              <a
-                href="contact.html#subscription"
-                class="text-blue-400 hover:underline mt-2 inline-block"
-                >Get Started</a
-              >
-            </article>
-            <article
-              class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
-            >
-              <h3 class="text-2xl font-bold mb-4">One Day Service</h3>
-              <p class="mb-4">
-                Immediate, short-term solutions to jumpstart your marketing
-                efforts.
-              </p>
-              <ul class="list-disc pl-5 text-lg">
-                <li>Quick brand audit</li>
-                <li>Rapid strategy consultation</li>
-                <li>Actionable insights</li>
-                <li>Fast implementation advice</li>
-                <li>On-demand support</li>
-              </ul>
-              <a
-                href="contact.html#one-day"
-                class="text-blue-400 hover:underline mt-2 inline-block"
-                >Book Now</a
-              >
-            </article>
-            <!-- New Consulting Service -->
-            <article
-              class="service-card p-6 bg-gray-800 rounded-lg hover:shadow-xl transition duration-300"
-            >
-              <h3 class="text-2xl font-bold mb-4">Consulting Service</h3>
-              <p class="mb-4">
-                Strategic consulting to accelerate your business growth with
-                belief-driven insights.
-              </p>
-              <ul class="list-disc pl-5 text-lg">
-                <li>Custom growth strategies</li>
-                <li>Competitive market analysis</li>
-                <li>Campaign development</li>
-                <li>Scalability planning</li>
-                <li>Ongoing advisory support</li>
-              </ul>
-              <a
-                href="contact.html#consulting"
-                class="text-blue-400 hover:underline mt-2 inline-block"
-                >Start Growing</a
-              >
-            </article>
+        <div class="glass-card p-6">
+          <h3 class="text-2xl font-bold mb-4">Product Sprint</h3>
+          <div class="details">
+            <p class="mb-4">
+              Ideal for startups with an MVP needing refined product design and
+              UX.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>Rapid user testing & feedback</li>
+              <li>UX/UI enhancements & mockups</li>
+              <li>Interactive prototypes</li>
+              <li>Customer insights integration</li>
+              <li>Scalable design system</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <h3 class="text-2xl font-bold mb-4">Brand Creation</h3>
+          <div class="details">
+            <p class="mb-4">
+              Comprehensive package to bring your vision to life with full
+              branding services.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>End-to-end brand identity</li>
+              <li>Visual & verbal strategy</li>
+              <li>Custom logo & typography</li>
+              <li>Brand guidelines & assets</li>
+              <li>Website & digital experience</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <h3 class="text-2xl font-bold mb-4">Rebranding Services</h3>
+          <div class="details">
+            <p class="mb-4">
+              Rebuild reputation and relevance after setbacks with a new
+              narrative.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>Brand identity overhaul</li>
+              <li>Perception analysis & repositioning</li>
+              <li>Social media realignment</li>
+              <li>New visuals & messaging</li>
+              <li>Media & PR campaign</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <h3 class="text-2xl font-bold mb-4">Subscription Service</h3>
+          <div class="details">
+            <p class="mb-4">
+              Ongoing support and tailored marketing solutions to stay ahead.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>Monthly strategy sessions</li>
+              <li>Performance monitoring</li>
+              <li>Regular content updates</li>
+              <li>Dedicated account manager</li>
+              <li>Priority support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <h3 class="text-2xl font-bold mb-4">One Day Service</h3>
+          <div class="details">
+            <p class="mb-4">
+              Immediate, short-term solutions to jumpstart your marketing
+              efforts.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>Quick brand audit</li>
+              <li>Rapid strategy consultation</li>
+              <li>Actionable insights</li>
+              <li>Fast implementation advice</li>
+              <li>On-demand support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <h3 class="text-2xl font-bold mb-4">Consulting Service</h3>
+          <div class="details">
+            <p class="mb-4">
+              Strategic consulting to accelerate your business growth with
+              belief-driven insights.
+            </p>
+            <ul class="list-disc pl-5 text-lg">
+              <li>Custom growth strategies</li>
+              <li>Competitive market analysis</li>
+              <li>Campaign development</li>
+              <li>Scalability planning</li>
+              <li>Ongoing advisory support</li>
+            </ul>
           </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-6" data-aos="fade">
-      <div class="w-full px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <footer class="bg-transparent py-6 w-full" data-aos="fade">
+      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <a href="/" aria-label="Q Marketing Agency Home">
-            <!-- Note: Convert to WebP and compress -->
             <img
-              src="assets/images/Untitled design (16).png"
+              src="assets\images\Untitled design (32).png"
               alt="Q Marketing Agency Footer Logo"
               class="h-16"
               loading="lazy"
@@ -408,42 +352,6 @@
         duration: 1200,
         once: true,
       });
-
-      var typed = new Typed("#typewriter", {
-        strings: [
-          "Innovative Services for the Digital Age.",
-          "Accelerate Your Growth Today.",
-        ],
-        typeSpeed: 50,
-        backSpeed: 25,
-        loop: true,
-        backDelay: 2000,
-      });
-
-      // Ensure video plays on mobile with fallback
-      document.addEventListener("DOMContentLoaded", function () {
-        var video = document.getElementById("hero-video");
-        var playButton = document.getElementById("play-video-btn");
-
-        // Attempt to play the video
-        video.play().catch(function (error) {
-          console.log("Autoplay failed: ", error);
-          // Show play button if autoplay fails
-          playButton.classList.remove("hidden");
-          // Retry after a delay
-          setTimeout(function () {
-            video.play().catch(function (retryError) {
-              console.log("Retry failed: ", retryError);
-            });
-          }, 1000);
-        });
-
-        // Hide play button if video starts playing
-        video.onplaying = function () {
-          playButton.classList.add("hidden");
-        };
-      });
     </script>
-    <script src="js/main.js" defer></script>
   </body>
 </html>
