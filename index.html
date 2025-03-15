@@ -3,26 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO Optimized Meta Tags -->
     <title>Q Marketing | Digital Marketing Agency & Brand Creation</title>
     <meta
       name="description"
-      content="Q Marketing: Innovative digital marketing agency specializing in belief-driven selling, automated lead generation, and generative engine optimization (GEO)."
+      content="Q Marketing: Innovative digital marketing agency specializing in belief-driven selling, automated lead generation, generative engine optimization (GEO), and comprehensive branding services."
     />
     <meta
       name="keywords"
-      content="digital marketing, brand creation, lead generation, GEO, AI marketing, Q Marketing"
+      content="digital marketing, brand creation, lead generation, GEO, AI marketing, rebranding, consulting, Q Marketing"
     />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Q Marketing" />
-    <!-- Open Graph Tags -->
     <meta
       property="og:title"
       content="Q Marketing | Digital Marketing Agency"
     />
     <meta
       property="og:description"
-      content="Transform your business with our innovative marketing solutions including brand creation and automated lead generation."
+      content="Transform your business with innovative marketing solutions including brand creation, automated lead generation, and consulting."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.qmakescontent.com/" />
@@ -39,36 +37,37 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
-      .space-bg {
-        background: #0a0a23;
+      body {
+        background: radial-gradient(circle at center, #0d1b2a 0%, #000000 100%);
         position: relative;
-        overflow: hidden;
+        min-height: 100vh;
+        overflow-y: auto;
       }
-      .stars {
-        position: absolute;
-        inset: 0;
-        background: transparent;
-      }
-      .stars::before,
-      .stars::after {
+      body::before {
         content: "";
-        position: absolute;
-        width: 2px;
-        height: 2px;
-        background: white;
-        border-radius: 50%;
-        box-shadow: 50px 30px #fff, 100px 200px #fff, 200px 50px #fff,
-          300px 150px #fff, 400px 250px #fff, 500px 100px #fff, 600px 300px #fff,
-          700px 80px #fff, 800px 220px #fff, 900px 180px #fff, 150px 350px #fff,
-          250px 400px #fff, 350px 280px #fff;
-        animation: twinkle 5s infinite ease-in-out;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="1" fill="white" opacity="0.8"/></svg>')
+          repeat;
+        animation: twinkle 10s infinite linear;
+        opacity: 0.8;
+        z-index: -2;
       }
-      .stars::after {
-        box-shadow: 120px 70px #fff, 180px 240px #fff, 240px 90px #fff,
-          320px 180px #fff, 450px 300px #fff, 550px 130px #fff, 650px 270px #fff,
-          750px 60px #fff, 850px 200px #fff, 950px 150px #fff, 200px 380px #fff,
-          300px 420px #fff, 400px 320px #fff;
-        animation-delay: -2.5s;
+      body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150"><circle cx="75" cy="75" r="2" fill="white" opacity="0.5"/></svg>')
+          repeat;
+        animation: drift 30s infinite linear;
+        opacity: 0.5;
+        z-index: -1;
       }
       @keyframes twinkle {
         0%,
@@ -79,11 +78,89 @@
           opacity: 0.3;
         }
       }
+      @keyframes drift {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(-50%, -50%);
+        }
+      }
+      /* Flip Card Styles */
+      .flip-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        height: 280px;
+        perspective: 1000px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        margin-bottom: 1rem;
+      }
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px;
+        overflow-y: auto;
+      }
+      .flip-card-front {
+        z-index: 2;
+      }
+      .flip-card-back {
+        transform: rotateY(180deg);
+        background: rgba(255, 255, 255, 0.15);
+      }
+      /* Hover for Desktop */
+      @media (min-width: 769px) {
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+      }
+      /* Mobile Tap Adjustments */
+      @media (max-width: 768px) {
+        .flip-card {
+          height: auto;
+          min-height: 200px;
+        }
+        .flip-card.active .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+        .flip-card-front,
+        .flip-card-back {
+          padding: 0.75rem;
+        }
+      }
+      /* Text Readability */
+      p,
+      ul {
+        font-size: 1rem;
+      }
+      @media (max-width: 640px) {
+        p,
+        ul {
+          font-size: 0.9rem;
+        }
+      }
     </style>
   </head>
-  <body class="bg-gray-900 text-white">
+  <body class="text-white">
     <header
-      class="relative container mx-auto px-6 py-4 flex flex-col md:flex-row items-center"
+      class="bg-gray-900 container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between"
       data-aos="fade"
     >
       <div class="logo">
@@ -91,38 +168,28 @@
           <img
             src="assets/images/Untitled design (16).png"
             alt="Q Marketing Agency Logo"
-            class="h-20"
+            class="h-16"
             loading="lazy"
           />
         </a>
       </div>
-      <nav
-        class="w-full md:w-auto md:absolute md:inset-x-0 flex justify-center mt-4 md:mt-0"
-        aria-label="Main navigation"
-      >
+      <nav aria-label="Main navigation">
         <ul
           class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-center"
         >
-          <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
-          <li><a href="about.html" class="hover:text-blue-400">About Us</a></li>
-          <li>
-            <a href="services.html" class="hover:text-blue-400">Our Services</a>
-          </li>
-          <li>
-            <a href="influencers.html" class="hover:text-blue-400"
-              >Influencers</a
-            >
-          </li>
-          <li>
-            <a href="contact.html" class="hover:text-blue-400">Contact Us</a>
-          </li>
+          <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+          <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+          <li><a href="#about" class="hover:text-blue-400">About Us</a></li>
+          <li><a href="#contact" class="hover:text-blue-400">Contact Us</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <!-- Hero Section -->
       <section
-        class="hero relative h-screen flex items-center overflow-hidden"
+        id="home"
+        class="relative h-screen flex items-center overflow-hidden"
         data-aos="fade"
       >
         <video
@@ -137,64 +204,157 @@
           Your browser does not support the video tag.
         </video>
         <div class="relative container mx-auto text-center px-4">
-          <h1 id="typewriter" class="text-5xl font-bold mb-4"></h1>
+          <h1 id="typewriter" class="text-4xl sm:text-5xl font-bold mb-4"></h1>
         </div>
       </section>
 
-      <section class="services py-16 bg-gray-800" data-aos="fade" id="services">
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-center mb-12">
-            The Pioneers of Belief Driven Selling
+      <!-- Detailed Services with Flip Cards -->
+      <section id="services" class="py-12" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">
+            Our Services
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <article
-              class="service-card p-6 bg-gray-700 rounded-lg hover:shadow-xl transition duration-300"
-            >
-              <h3 class="text-2xl font-semibold mb-4">Seed Sprint</h3>
-              <p>
-                AI-powered strategies designed to create a brand, deck, and
-                website quickly for early stage businesses.
-              </p>
-            </article>
-            <article
-              class="service-card p-6 bg-gray-700 rounded-lg hover:shadow-xl transition duration-300"
-            >
-              <h3 class="text-2xl font-semibold mb-4">Product Sprint</h3>
-              <p>
-                Perfect for businesses with an MVP looking to scale and grow.
-              </p>
-            </article>
-            <article
-              class="service-card p-6 bg-gray-700 rounded-lg hover:shadow-xl transition duration-300"
-            >
-              <h3 class="text-2xl font-semibold mb-4">Brand Creation</h3>
-              <p>
-                A full send brand package designed to build immersive digital
-                experiences that drive engagement and conversions.
-              </p>
-            </article>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3 class="text-xl font-bold mb-3">Seed Sprint</h3>
+                  <p>
+                    Tailored for early-stage startups to rapidly build brand
+                    identity and digital presence.
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <ul class="list-disc pl-4 text-base">
+                    <li>One-month brand identity sprint</li>
+                    <li>Market research & competitor analysis</li>
+                    <li>Custom logo & visual identity</li>
+                    <li>Compelling brand narrative</li>
+                    <li>Rapid prototyping & iteration</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3 class="text-xl font-bold mb-3">Product Sprint</h3>
+                  <p>
+                    Ideal for startups with an MVP needing refined product
+                    design and UX.
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <ul class="list-disc pl-4 text-base">
+                    <li>Rapid user testing & feedback</li>
+                    <li>UX/UI enhancements & mockups</li>
+                    <li>Interactive prototypes</li>
+                    <li>Customer insights integration</li>
+                    <li>Scalable design system</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3 class="text-xl font-bold mb-3">Brand Creation</h3>
+                  <p>
+                    Comprehensive package to bring your vision to life with full
+                    branding services.
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <ul class="list-disc pl-4 text-base">
+                    <li>End-to-end brand identity</li>
+                    <li>Visual & verbal strategy</li>
+                    <li>Custom logo & typography</li>
+                    <li>Brand guidelines & assets</li>
+                    <li>Website & digital experience</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3 class="text-xl font-bold mb-3">Rebranding Services</h3>
+                  <p>
+                    Rebuild reputation and relevance after setbacks with a new
+                    narrative.
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <ul class="list-disc pl-4 text-base">
+                    <li>Brand identity overhaul</li>
+                    <li>Perception analysis & repositioning</li>
+                    <li>Social media realignment</li>
+                    <li>New visuals & messaging</li>
+                    <li>Media & PR campaign</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3 class="text-xl font-bold mb-3">Subscription Service</h3>
+                  <p>
+                    Ongoing support and tailored marketing solutions to stay
+                    ahead.
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <ul class="list-disc pl-4 text-base">
+                    <li>Monthly strategy sessions</li>
+                    <li>Performance monitoring</li>
+                    <li>Regular content updates</li>
+                    <li>Dedicated account manager</li>
+                    <li>Priority support</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3 class="text-xl font-bold mb-3">One Day Service</h3>
+                  <p>
+                    Immediate, short-term solutions to jumpstart your marketing
+                    efforts.
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <ul class="list-disc pl-4 text-base">
+                    <li>Quick brand audit</li>
+                    <li>Rapid strategy consultation</li>
+                    <li>Actionable insights</li>
+                    <li>Fast implementation advice</li>
+                    <li>On-demand support</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section
-        class="automated-lead-gen py-16 bg-gray-900"
-        data-aos="fade-up"
-        id="lead-generation"
-      >
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-4xl font-bold mb-12">Automated Lead Generation</h2>
+      <!-- Automated Lead Generation -->
+      <section class="py-12" data-aos="fade-up" id="lead-generation">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-10">
+            Automated Lead Generation
+          </h2>
           <div class="max-w-2xl mx-auto">
-            <h3 class="text-2xl font-bold mb-4">
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">
               Grow Your Business Effortlessly
             </h3>
-            <p class="mb-6 text-lg">
+            <p class="mb-6 text-base sm:text-lg">
               Our Automated Lead Generation service leverages cutting-edge tools
-              and strategies to attract, nurture, and convert leads without
-              constant manual effort. Perfect for businesses looking to scale
-              efficiently.
+              to attract, nurture, and convert leads without constant manual
+              effort.
             </p>
-            <ul class="list-disc list-inside text-lg space-y-2">
+            <ul class="list-disc list-inside text-base sm:text-lg space-y-2">
               <li>Custom-built lead capture funnels</li>
               <li>Automated email marketing campaigns</li>
               <li>AI-driven lead scoring and segmentation</li>
@@ -205,63 +365,54 @@
         </div>
       </section>
 
-      <section
-        class="ai-seo py-16 bg-gray-900"
-        data-aos="fade-up"
-        id="geo-services"
-      >
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-4xl font-bold mb-12">
+      <!-- Generative Engine Optimization -->
+      <section class="py-12" data-aos="fade-up" id="geo-services">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-10">
             Generative Engine Optimization (GEO)
           </h2>
           <div class="max-w-2xl mx-auto">
-            <h3 class="text-2xl font-bold mb-4">
-              Get Your Product Seen by AI Models
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">
+              Get Seen by AI Models
             </h3>
-            <p class="mb-6 text-lg">
-              We optimize your product or service to appear in AI-generated
-              results, ensuring large language models (LLMs) like chatbots and
-              virtual assistants recommend you to users. Dominate the future of
-              search with us.
+            <p class="mb-6 text-base sm:text-lg">
+              We optimize your product to appear in AI-generated results,
+              ensuring LLMs recommend you to users.
             </p>
-            <ul class="list-disc list-inside text-lg space-y-2">
+            <ul class="list-disc list-inside text-base sm:text-lg space-y-2">
               <li>Content structuring for LLM comprehension</li>
               <li>Targeted keyword optimization for AI queries</li>
               <li>Enhanced data markup for AI crawlers</li>
-              <li>Contextual authority building for model trust</li>
-              <li>Performance tracking in AI-driven outputs</li>
+              <li>Contextual authority building</li>
+              <li>Performance tracking in AI outputs</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- New Consulting Section -->
-      <section
-        class="consulting py-16 bg-gray-900"
-        data-aos="fade-up"
-        id="consulting"
-      >
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-4xl font-bold mb-12">Consulting Services</h2>
+      <!-- Consulting Services -->
+      <section class="py-12" data-aos="fade-up" id="consulting">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-10">
+            Consulting Services
+          </h2>
           <div class="max-w-2xl mx-auto">
-            <h3 class="text-2xl font-bold mb-4">
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">
               Strategic Growth Through Belief-Driven Insights
             </h3>
-            <p class="mb-6 text-lg">
-              Our Consulting Services are tailored to accelerate your business
-              growth by aligning strategies with your audience’s core beliefs.
-              We partner with you to unlock scalable success and measurable
-              results.
+            <p class="mb-6 text-base sm:text-lg">
+              Tailored consulting to accelerate your business growth by aligning
+              strategies with your audience’s core beliefs.
             </p>
-            <ul class="list-disc list-inside text-lg space-y-2">
-              <li>Customized growth roadmaps for your business</li>
+            <ul class="list-disc list-inside text-base sm:text-lg space-y-2">
+              <li>Customized growth roadmaps</li>
               <li>Market positioning and competitive analysis</li>
               <li>Belief-driven campaign development</li>
-              <li>Performance optimization and scalability planning</li>
-              <li>Ongoing strategic advisory for sustained growth</li>
+              <li>Performance optimization and scalability</li>
+              <li>Ongoing strategic advisory</li>
             </ul>
             <a
-              href="contact.html#consulting"
+              href="#contact"
               class="text-blue-400 hover:underline mt-4 inline-block"
               >Start Growing Today</a
             >
@@ -269,161 +420,76 @@
         </div>
       </section>
 
-      <section
-        class="trusted-brands py-16 bg-gray-800"
-        data-aos="fade"
-        id="clients"
-      >
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-center mb-12">
-            Trusted by Leading Brands
+      <!-- Get Started (Calendly Integrated) -->
+      <section class="py-12" data-aos="fade-up" id="get-quote">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+            Get Started with Q Marketing
           </h2>
-          <div class="flex flex-nowrap justify-around gap-8 overflow-x-auto">
-            <div class="brand-wrapper">
-              <img
-                src="assets/images/Untitled design (1).png"
-                alt="Brand 1 Logo"
-                class="brand-logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="brand-wrapper">
-              <img
-                src="assets/images/Untitled design (2).png"
-                alt="Brand 2 Logo"
-                class="brand-logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="brand-wrapper">
-              <img
-                src="assets/images/Untitled design (3).png"
-                alt="Brand 3 Logo"
-                class="brand-logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="brand-wrapper">
-              <img
-                src="assets/images/Untitled design (4).png"
-                alt="Brand 4 Logo"
-                class="brand-logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="brand-wrapper">
-              <img
-                src="assets/images/Untitled design (5).png"
-                alt="Brand 5 Logo"
-                class="brand-logo"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- New Get Quote Section with Typeform and Calendly -->
-      <section class="py-16 bg-gray-900" data-aos="fade-up" id="get-quote">
-        <div class="container mx-auto px-6">
-          <div class="text-center mb-8">
-            <h2 class="text-4xl font-bold mb-4">
-              Get Started with Q Marketing
-            </h2>
-            <p class="text-lg">
-              Request a free marketing quote or schedule a consultation to grow
-              your business today.
-            </p>
-          </div>
-          <div class="flex flex-col md:flex-row justify-center gap-8">
+          <p class="text-base sm:text-lg mb-8">
+            Schedule a consultation to grow your business today.
+          </p>
+          <div class="max-w-2xl mx-auto">
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">
+              Schedule a Consultation
+            </h3>
             <div
-              class="typeform-container bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2"
-            >
-              <h3 class="text-2xl font-bold mb-4 text-center">Get a Quote</h3>
-              <div
-                data-tf-live="01JNCCFVFW27VPTNMKFYY8PRGX"
-                style="width: 100%; height: 500px"
-              ></div>
-            </div>
-            <div
-              class="calendly-container bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2"
-            >
-              <h3 class="text-2xl font-bold mb-4 text-center">
-                Schedule a Consultation
-              </h3>
-              <div
-                class="calendly-inline-widget"
-                data-url="https://calendly.com/nquaranta-sparklecleanpronj"
-                style="min-width: 320px; height: 700px"
-              ></div>
-            </div>
+              class="calendly-inline-widget"
+              data-url="https://calendly.com/nquaranta-sparklecleanpronj"
+              style="min-width: 300px; height: 630px"
+            ></div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-gray-900 py-6" data-aos="fade">
-      <div class="w-full px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <a href="/" aria-label="Q Marketing Agency Home">
-            <img
-              src="assets/images/Untitled design (16).png"
-              alt="Q Marketing Agency Footer Logo"
-              class="h-16"
-              loading="lazy"
-            />
-          </a>
-          <p class="text-sm">We humbly create for you.</p>
-        </div>
-        <div>
-          <h3 class="font-bold mb-2">Newsletter Signup</h3>
-          <p class="text-sm mb-2">
-            Subscribe for marketing updates and insights.
-          </p>
-          <form
-            action="/subscribe"
-            method="POST"
-            aria-label="Newsletter subscription form"
-          >
-            <input
-              type="email"
-              placeholder="Enter your email"
-              class="w-full p-2 rounded mb-2 text-gray-900"
-              required
-              aria-label="Email address"
-            />
-            <button
-              type="submit"
-              class="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded"
-            >
-              Subscribe Now
-            </button>
-          </form>
-        </div>
-      </div>
-      <div class="text-center mt-4 pb-4 text-[10px]">
-        <p>© 2025 Q Marketing Agency. All rights reserved.</p>
+    <!-- New Footer -->
+    <footer class="py-8 text-center" data-aos="fade" id="contact">
+      <div class="container mx-auto px-4">
+        <a href="/" aria-label="Q Marketing Agency Home">
+          <img
+            src="assets/images/Untitled design (34).png"
+            alt="Q Marketing Agency Logo"
+            class="h-16 mx-auto mb-4"
+            loading="lazy"
+          />
+        </a>
+        <p class="text-sm mb-4">
+          Crafting your digital future, one step at a time.
+        </p>
+        <a
+          href="#get-quote"
+          class="text-blue-400 hover:underline text-lg font-semibold"
+          >Book a Free Consultation</a
+        >
+        <p class="text-[10px] mt-4">
+          © 2025 Q Marketing Agency. All rights reserved.
+        </p>
       </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1200, once: true });
-      var typed = new Typed("#typewriter", {
-        strings: ["We create brands and products for the new internet."],
-        typeSpeed: 30,
-        backSpeed: 0, // Set to 0 to prevent backspacing
-        showCursor: false,
-        loop: false,
-      });
-    </script>
-    <!-- Typeform and Calendly Scripts -->
-    <script src="//embed.typeform.com/next/embed.js"></script>
     <script
       type="text/javascript"
       src="https://assets.calendly.com/assets/external/widget.js"
       async
     ></script>
-    <script src="js/main.js" defer></script>
+    <script>
+      AOS.init({ duration: 1200, once: true });
+      var typed = new Typed("#typewriter", {
+        strings: ["We create brands and products for the new internet."],
+        typeSpeed: 30,
+        backSpeed: 0,
+        showCursor: false,
+        loop: false,
+      });
+
+      // Mobile tap toggle for flip cards
+      document.querySelectorAll(".flip-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>
