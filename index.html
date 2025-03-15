@@ -42,6 +42,7 @@
         position: relative;
         min-height: 100vh;
         overflow-y: auto;
+        color: #ffffff; /* Ensure body text is white */
       }
       body::before {
         content: "";
@@ -97,6 +98,7 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         margin-bottom: 1rem;
+        color: #ffffff; /* Explicitly set text color */
       }
       .flip-card-inner {
         position: relative;
@@ -117,21 +119,23 @@
         justify-content: center;
         border-radius: 15px;
         overflow-y: auto;
+        color: #ffffff; /* Ensure text is white */
       }
       .flip-card-front {
+        background: rgba(255, 255, 255, 0.1); /* Explicit front background */
         z-index: 2;
       }
       .flip-card-back {
+        background: rgba(255, 255, 255, 0.15); /* Explicit back background */
         transform: rotateY(180deg);
-        background: rgba(255, 255, 255, 0.15);
       }
-      /* Hover for Desktop */
+      /* Desktop Hover */
       @media (min-width: 769px) {
         .flip-card:hover .flip-card-inner {
           transform: rotateY(180deg);
         }
       }
-      /* Mobile Tap Adjustments */
+      /* Mobile Tap */
       @media (max-width: 768px) {
         .flip-card {
           height: auto;
@@ -249,7 +253,7 @@
                     <li>Rapid user testing & feedback</li>
                     <li>UX/UI enhancements & mockups</li>
                     <li>Interactive prototypes</li>
-                    <li>Customer insights integration</li>
+                    <li>Customer insights integrations</li>
                     <li>Scalable design system</li>
                   </ul>
                 </div>
@@ -486,9 +490,14 @@
 
       // Mobile tap toggle for flip cards
       document.querySelectorAll(".flip-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          card.classList.toggle("active");
-        });
+        card.addEventListener(
+          "touchstart",
+          (e) => {
+            e.preventDefault(); // Prevent default touch behavior
+            card.classList.toggle("active");
+          },
+          { passive: false }
+        );
       });
     </script>
   </body>
