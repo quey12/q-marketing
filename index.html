@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>Q Marketing | Digital Marketing Agency & Brand Creation</title>
     <meta
       name="description"
@@ -26,12 +29,12 @@
     <meta property="og:url" content="https://www.qmakescontent.com/" />
     <meta
       property="og:image"
-      content="https://www.qmakescontent.com/assets/images/Untitled design (16).png"
+      content="https://www.qmakescontent.com/assets/images/Untitled%20design%20(16).png"
     />
     <link
       rel="icon"
       type="image/x-icon"
-      href="assets/images/Untitled design (16).png"
+      href="./assets/images/Untitled%20design%20(16).png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -42,7 +45,8 @@
         position: relative;
         min-height: 100vh;
         overflow-y: auto;
-        color: #ffffff; /* Ensure body text is white */
+        color: #ffffff;
+        -webkit-text-size-adjust: 100%; /* Prevent iOS text scaling */
       }
       body::before {
         content: "";
@@ -89,8 +93,9 @@
       }
       /* Flip Card Styles */
       .flip-card {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.1) !important; /* Force background */
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
         border-radius: 15px;
         border: 1px solid rgba(255, 255, 255, 0.2);
         height: 280px;
@@ -98,7 +103,7 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         margin-bottom: 1rem;
-        color: #ffffff; /* Explicitly set text color */
+        color: #ffffff !important;
       }
       .flip-card-inner {
         position: relative;
@@ -106,6 +111,7 @@
         height: 100%;
         transition: transform 0.6s;
         transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d; /* Safari */
       }
       .flip-card-front,
       .flip-card-back {
@@ -113,26 +119,29 @@
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
+        -webkit-backface-visibility: hidden; /* Safari */
         padding: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         border-radius: 15px;
         overflow-y: auto;
-        color: #ffffff; /* Ensure text is white */
+        color: #ffffff !important;
       }
       .flip-card-front {
-        background: rgba(255, 255, 255, 0.1); /* Explicit front background */
+        background: rgba(255, 255, 255, 0.1) !important;
         z-index: 2;
       }
       .flip-card-back {
-        background: rgba(255, 255, 255, 0.15); /* Explicit back background */
+        background: rgba(255, 255, 255, 0.15) !important;
         transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg); /* Safari */
       }
       /* Desktop Hover */
       @media (min-width: 769px) {
         .flip-card:hover .flip-card-inner {
           transform: rotateY(180deg);
+          -webkit-transform: rotateY(180deg);
         }
       }
       /* Mobile Tap */
@@ -143,6 +152,7 @@
         }
         .flip-card.active .flip-card-inner {
           transform: rotateY(180deg);
+          -webkit-transform: rotateY(180deg);
         }
         .flip-card-front,
         .flip-card-back {
@@ -162,7 +172,7 @@
       }
     </style>
   </head>
-  <body class="text-white">
+  <body>
     <header
       class="bg-gray-900 container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between"
       data-aos="fade"
@@ -170,7 +180,7 @@
       <div class="logo">
         <a href="/" aria-label="Q Marketing Agency Home">
           <img
-            src="assets/images/Untitled design (16).png"
+            src="./assets/images/Untitled%20design%20(16).png"
             alt="Q Marketing Agency Logo"
             class="h-16"
             loading="lazy"
@@ -204,7 +214,7 @@
           class="absolute inset-0 w-full h-full object-cover"
           aria-hidden="true"
         >
-          <source src="assets/videos/background.MP4" type="video/mp4" />
+          <source src="./assets/videos/background.MP4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div class="relative container mx-auto text-center px-4">
@@ -452,7 +462,7 @@
       <div class="container mx-auto px-4">
         <a href="/" aria-label="Q Marketing Agency Home">
           <img
-            src="assets/images/Untitled design (34).png"
+            src="./assets/images/Untitled%20design%20(16).png"
             alt="Q Marketing Agency Logo"
             class="h-16 mx-auto mb-4"
             loading="lazy"
@@ -493,8 +503,12 @@
         card.addEventListener(
           "touchstart",
           (e) => {
-            e.preventDefault(); // Prevent default touch behavior
+            e.preventDefault();
             card.classList.toggle("active");
+            console.log(
+              "Card toggled:",
+              card.classList.contains("active") ? "Flipped" : "Front"
+            );
           },
           { passive: false }
         );
